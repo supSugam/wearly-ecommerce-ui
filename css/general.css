@@ -1,0 +1,97 @@
+/* 
+Main Color: #3561da
+*/
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Outfit", sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	font-size: 1.6rem;
+	color: #1f2937;
+	background: #f0f5ff;
+	box-sizing: border-box;
+}
+
+.gradient-text {
+	background: #2563eb;
+	background: linear-gradient(to right, #2563eb 0%, #1e40af 100%);
+
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.extra-bold {
+	font-weight: 700;
+}
+
+.header__heading {
+	color: #3561da;
+	font-family: "Righteous", cursive;
+	font-size: 3.2rem;
+}
+.btn,
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	text-decoration: none;
+	padding: 1rem 3.8rem;
+	background: #3561da;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 500;
+	font-family: inherit;
+	transition: all 0.3s;
+	cursor: pointer;
+	border: none;
+}
+
+.margin-left {
+	margin-left: 2.4rem;
+}
+
+.btn-header:hover {
+	background: #2c53b7;
+}
+
+/* 
+Reusable Typography
+*/
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+	color: #1f2937;
+	font-weight: 600;
+}
+
+.heading-primary {
+	font-size: 6.8rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+	font-size: 4.4rem;
+	line-height: 1.2;
+	margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+	font-size: 3rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
+}
