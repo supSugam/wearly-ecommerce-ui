@@ -61,7 +61,7 @@
 	transition: clip-path 0.2s;
 	position: absolute;
 
-	top: 5.4rem;
+	top: 9.4rem;
 	left: 4rem;
 	width: 35rem;
 	height: 35rem;
@@ -77,5 +77,13 @@
 }
 
 .portrait:active {
+	--clip: var(--splatted);
+}
+
+.product_card:hover {
+	--clip: var(--splattier);
+}
+
+.product_card:active {
 	--clip: var(--splatted);
 }
