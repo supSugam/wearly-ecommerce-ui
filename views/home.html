@@ -18,9 +18,14 @@
 			href="http://kit-pro.fontawesome.com/releases/v6.4.0/css/pro.min.css"
 			rel="stylesheet"
 		/>
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 		<link rel="stylesheet" href="../css/general.css" />
 		<link rel="stylesheet" href="../css/styles.css" />
+		<link rel="stylesheet" href="../css/effects.css" />
+
+
+		<script defer src="../js/effects.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -85,7 +90,7 @@
 				<a href="#" class="header__nav-link">
 					<i class="fa-solid fa-user"></i>
 				</a>  -->
-					<button class="btn btn-header margin-left">Login</button>
+					<button class="btn btn-primary margin-left">Login</button>
 				</div>
 				</div>
 			</div>
@@ -105,7 +110,7 @@
 							showcase your personality.
 						</p>
 						<div class="hero-btn">
-							<button class="btn btn-hero">Shop Now</button>
+							<button class="btn btn-primary">Shop Now</button>
 							<div class="social-links flex--social">
 								<a href="http://www.pinterest.com" target="_blank"
 								  ><i class="fa-brands fa-pinterest social-icon"></i></a>
@@ -127,22 +132,274 @@
 				</div>
 			</section>
 
+			<section class="section-category container">
+				<div class="product-category">
+					<div class="category">
+						<i class="ph ph-dress"></i>
+						<span>Dress</span>
+					</div>
+					<div class="category">
+						<i class="ph ph-t-shirt"></i>
+						<span>Shirt</span>
+					</div>
+					<div class="category">
+						<i class="ph ph-hoodie"></i>
+						<span>Hoodie</span>
+					</div>
+					<div class="category">
+						<i class="ph ph-sneaker"></i>
+						<span>Sneaker</span>
+					</div>
+					<div class="category">
+						<i class="ph ph-pants"></i>
+						<span>Pants</span>
+					</div>
+					<div class="category">
+						<i class="ph ph-shirt-folded"></i>
+						<span>Formalwear</span>
+					</div>
+				</div>
+			</section>
+			
 			<section class="section__featured">
 				<div class="featured-heading">
 					<h1 class="heading-secondary">
-						<span class="extra-bold">Best Offers </span> <span class="gradient-text">Now</span>
+						<span class="extra-bold">Popular </span> <span class="gradient-text">Right Now</span>
 					</h1>
+					<p class="description-text">
+						We have the best offers for you. Check out our latest offers and
+						get the best deals. Don't miss out on the chance to get your hands on these sought-after products at unbeatable prices!
 				</div>
 
 				<div class="section__featured-boxes">
-					<div class="featured-box">
-some text
+					<div class="featured-box featured_guy">
+						<div class="featured-box__text">
+							<h1 class="heading-secondary">
+								<span class="gradient-text">25%</span> Off
+							</h1>
+							<h3 class="heading-tertiary">Premium Jeans</h3>
+							<button class="btn btn-featured">Buy Now <i class="ph ph-arrow-elbow-right"></i></button>
+						</div>
 					</div>
 
-					<div class="featured-box">
-						some	text
+					<div class="featured-box featured_girl">
+						<div class="featured-box__text">
+							<h1 class="heading-secondary">
+								<span class="gradient-text">32%</span> Off
+							</h1>
+							<h3 class="heading-tertiary">Full White sportwear</h3>
+							<button class="btn btn-featured">Buy Now <i class="ph ph-arrow-elbow-right"></i></button>
+						</div>
 					</div>
 				</div>
+			</section>
+
+			<section class="section-product_cards">
+				<div class="featured-heading container">
+					<p class="small-heading">
+						Our Products</p>
+					<h1 class="heading-secondary">
+						<span class="extra-bold">Find what you're</span> <span class="gradient-text">looking for.</span>
+					</h1>
+				</div>
+
+					<div class="container product_cards--container">
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-tags">
+									<span class="tag-content product-category">Tshirts</span>
+									<span class="tag-content product-category">Unisex</span>
+								</div>
+								<p class="product-title">Skull Printed T-Shirt</p>
+
+								<ul class="product-attributes">
+									<li class="product-attribute">
+										<i class="ph-fill ph-seal-check"></i>
+										<span class="tag-content product-brand">Nike</span>
+										<!-- <div class="attribute-price portrait">
+											<p class="price-currency">Rs. <span class="product-price">1,499</span></p>
+										</div> -->
+									</li>
+									<li class="product-attribute">
+											<p>Colors</p>
+										<div class="attribute-boxes">
+											<div class="color-box color-box--black"></div>
+											<div class="color-box color-box--white"></div>
+											<div class="color-box color-box--green"></div>
+											<div class="color-box color-box--blue"></div>
+										</div>
+									</li>
+
+									<li class="product-attribute">
+										Sizes
+										<div class="attribute-boxes">
+											<div class="size-box"><p>S</p></div>
+											<div class="size-box"><p>M</p></div>
+											<div class="size-box"><p>L</p></div>
+											<div class="size-box"><p>XL</p></div>
+										</div>
+									</li>
+
+								</ul>
+						    </div>
+						</div>
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs. 
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-tags">
+									<span class="tag-content product-category">Tshirts</span>
+									<span class="tag-content product-category">Unisex</span>
+								</div>
+								<p class="product-title">Skull Printed T-Shirt</p>
+
+								<ul class="product-attributes">
+									<li class="product-attribute">
+										<i class="ph-fill ph-seal-check"></i>
+										<span class="tag-content product-brand">Nike</span>
+									</li>
+									<li class="product-attribute">
+											<p>Colors</p>
+										<div class="attribute-boxes">
+											<div class="color-box color-box--black"></div>
+											<div class="color-box color-box--white"></div>
+											<div class="color-box color-box--green"></div>
+											<div class="color-box color-box--blue"></div>
+										</div>
+									</li>
+
+									<li class="product-attribute">
+										Sizes
+										<div class="attribute-boxes">
+											<div class="size-box"><p>S</p></div>
+											<div class="size-box"><p>M</p></div>
+											<div class="size-box"><p>L</p></div>
+											<div class="size-box"><p>XL</p></div>
+										</div>
+									</li>
+
+								</ul>
+						    </div>
+						</div>
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-tags">
+									<span class="tag-content product-category">Tshirts</span>
+									<span class="tag-content product-category">Unisex</span>
+								</div>
+								<p class="product-title">Skull Printed T-Shirt</p>
+
+								<ul class="product-attributes">
+									<li class="product-attribute">
+										<i class="ph-fill ph-seal-check"></i>
+										<span class="tag-content product-brand">Nike</span>
+									</li>
+									<li class="product-attribute">
+											<p>Colors</p>
+										<div class="attribute-boxes">
+											<div class="color-box color-box--black"></div>
+											<div class="color-box color-box--white"></div>
+											<div class="color-box color-box--green"></div>
+											<div class="color-box color-box--blue"></div>
+										</div>
+									</li>
+
+									<li class="product-attribute">
+										Sizes
+										<div class="attribute-boxes">
+											<div class="size-box"><p>S</p></div>
+											<div class="size-box"><p>M</p></div>
+											<div class="size-box"><p>L</p></div>
+											<div class="size-box"><p>XL</p></div>
+										</div>
+									</li>
+
+								</ul>
+						    </div>
+						</div>
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-tags">
+									<span class="tag-content product-category">Tshirts</span>
+									<span class="tag-content product-category">Unisex</span>
+								</div>
+								<p class="product-title">Skull Printed T-Shirt</p>
+
+								<ul class="product-attributes">
+									<li class="product-attribute">
+										<i class="ph-fill ph-seal-check"></i>
+										<span class="tag-content product-brand">Nike</span>
+										<!-- <div class="attribute-price portrait">
+											<p class="price-currency">Rs. <span class="product-price">1,499</span></p>
+										</div> -->
+									</li>
+									<li class="product-attribute">
+											<p>Colors</p>
+										<div class="attribute-boxes">
+											<div class="color-box color-box--black"></div>
+											<div class="color-box color-box--white"></div>
+											<div class="color-box color-box--green"></div>
+											<div class="color-box color-box--blue"></div>
+										</div>
+									</li>
+
+									<li class="product-attribute">
+										Sizes
+										<div class="attribute-boxes">
+											<div class="size-box"><p>S</p></div>
+											<div class="size-box"><p>M</p></div>
+											<div class="size-box"><p>L</p></div>
+											<div class="size-box"><p>XL</p></div>
+										</div>
+									</li>
+
+								</ul>
+						    </div>
+						</div>
+					</div>
+
 			</section>
 		</main>
 	</body>

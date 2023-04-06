@@ -25,6 +25,12 @@ body {
 	box-sizing: border-box;
 }
 
+.container {
+	max-width: 130rem;
+	padding: 0 0;
+	margin: 3.2rem auto;
+}
+
 .gradient-text {
 	background: #2563eb;
 	background: linear-gradient(to right, #2563eb 0%, #1e40af 100%);
@@ -48,11 +54,7 @@ body {
 .btn:visited {
 	display: inline-block;
 	text-decoration: none;
-	padding: 1rem 3.8rem;
-	background: #3561da;
-	color: #fff;
 	font-size: 2rem;
-	font-weight: 500;
 	font-family: inherit;
 	transition: all 0.3s;
 	cursor: pointer;
@@ -62,20 +64,20 @@ body {
 .margin-left {
 	margin-left: 2.4rem;
 }
-
-.btn-header:hover {
-	background: #2c53b7;
-}
-
 /* 
 Reusable Typography
 */
+
+.text--active {
+	color: #fff !important;
+}
 
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
 	color: #1f2937;
 	font-weight: 600;
+	transition: all 0.3s ease-in-out;
 }
 
 .heading-primary {
@@ -85,13 +87,17 @@ Reusable Typography
 }
 
 .heading-secondary {
-	font-size: 4.4rem;
+	font-size: 4.6rem;
 	line-height: 1.2;
-	margin-bottom: 9.6rem;
+	letter-spacing: 0.1rem;
 }
 
 .heading-tertiary {
 	font-size: 3rem;
 	line-height: 1.2;
-	margin-bottom: 3.2rem;
+}
+
+.flex--col {
+	display: flex;
+	flex-direction: column;
 }
