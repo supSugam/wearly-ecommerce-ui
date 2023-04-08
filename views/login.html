@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Page</title>
+
+		<!-- Importing Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Righteous&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="http://kit-pro.fontawesome.com/releases/v6.4.0/css/pro.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+		<script defer src="../js/effects.js"></script>
+		<script defer src="../js/script.js"></script>
+		<link rel="stylesheet" href="../css/styles.css" />
+		<link rel="stylesheet" href="../css/general.css" />
+		<link rel="stylesheet" href="../css/effects.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+	</head>
+	<body>
+		<div class="goIn-container container-login">
+			<div class="go-back-main">
+				<a href="index.html">
+					<i class="fas fa-arrow-left"></i>
+					Explore Products Without Logging In
+				</a>
+			</div>
+			<section class="form-section login-section">
+				<div class="svg-half">
+					<img class="blue-blob" src="../img/blue-blob.svg" alt="Blue Blob" />
+					<img src="../img/login-aside.svg" alt="Login" class="login-aside" />
+				</div>
+
+				<div class="form-container">
+					<div class="header__logo-box">
+						<img
+							src="../img/animated-logo.gif"
+							alt="wearly-logo"
+							class="header__logo"
+						/>
+						<h1 class="header__heading">wearly</h1>
+					</div>
+					<form class="login-form" action="">
+						<div class="email-field input-field-container">
+							<i class="fa-solid fa-user input-field-icon"></i>
+							<input
+								type="email"
+								name="email"
+								placeholder="Email"
+								required
+								class="input-field"
+							/>
+						</div>
+
+						<div class="password-field input-field-container">
+							<i class="fa-solid fa-key input-field-icon"></i>
+							<input
+								type="password"
+								name="password"
+								placeholder="Password"
+								required
+								class="input-field"
+							/>
+						</div>
+
+						<button type="submit" class="btn btn-primary submit-button">
+							Login
+						</button>
+					</form>
+					<div class="redirect-text">
+						<p>Don't have an account?</p>
+						<a class="redirect-sign-up" href="#">Sign Up</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

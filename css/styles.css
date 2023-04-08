@@ -628,3 +628,113 @@ Quantity Box
 	background-color: #000;
 	color: #fff;
 }
+
+.btn--cart:active,
+.btn--cart:focus {
+	background-color: #000;
+	color: #fff;
+}
+
+/* 
+
+Footer
+
+*/
+
+.grid--footer {
+	display: grid;
+	gap: 4.6rem 18rem;
+	grid-template-columns: 0.4fr 0.6fr;
+	margin-top: 6.4rem;
+
+	justify-content: space-between;
+}
+
+.contact-col {
+	display: grid;
+	grid-template-rows: 0.6fr 0.2fr 0.2fr;
+	gap: 2.6rem 0;
+}
+
+.footer-img {
+	width: 40%;
+	margin: 1.2rem;
+}
+
+.contact-contents {
+	display: grid;
+	gap: 3.2rem;
+}
+
+.copyright {
+	font-size: 1.5rem;
+	line-height: 1.6;
+	#4b5563
+	margin-top: auto;
+}
+
+.contact-text {
+	color: #030712;
+	font-weight: 500;
+	font-size: 2.4rem;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	gap: 1.8rem;
+	transition: all 0.3s ease-out;
+}
+
+.other-col {
+	padding-top: 3.2rem;
+	display: grid;
+	grid-template-columns: 0.35fr 0.35fr 0.3fr;
+}
+
+.pages-col .footer-link:hover,
+.footer-link:active {
+	color: #fff;
+	box-shadow: inset 0 -1px 0 #fff;
+}
+
+.footer-heading {
+	color: #000s;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 6.8rem;
+	letter-spacing: 2px;
+}
+
+.footer-nav {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+
+.footer-link,
+.footer-link:link,
+.footer-link:visited {
+	text-decoration: none;
+	font-size: 1.6rem;
+	color: #000;
+	transition: all 0.3s ease-out;
+	padding-bottom: 0.6rem;
+}
+
+.footer-link-flex {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.foot-container {
+	max-width: 120rem;
+	padding: 0 0 0 3.2rem;
+	margin: 0 auto;
+}
