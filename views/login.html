@@ -19,12 +19,19 @@
 		/>
 		<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-		<script defer src="../js/effects.js"></script>
-		<script defer src="../js/script.js"></script>
 		<link rel="stylesheet" href="../css/styles.css" />
 		<link rel="stylesheet" href="../css/general.css" />
 		<link rel="stylesheet" href="../css/effects.css" />
 		<link rel="stylesheet" href="../css/login.css" />
+
+		<!-- JavaScript -->
+		<script defer src="../js/view/effects.js"></script>
+		<script defer src="../js/view/formView.js"></script>
+		<script defer src="../js/view/imageView.js"></script>
+		<script defer src="../js/view/passwordToggler.js"></script>
+		<script defer src="../js/view/product-card-view.js"></script>
+		<script defer src="../js/controller/formControllers.js"></script>
+		<script defer src="../js/controller/loader.js"></script>
 	</head>
 	<body>
 		<div class="goIn-container container-login">
@@ -36,8 +43,10 @@
 			</div>
 			<section class="form-section login-section">
 				<div class="svg-half">
-					<img class="blue-blob" src="../img/blue-blob.svg" alt="Blue Blob" />
-					<img src="../img/login-aside.svg" alt="Login" class="login-aside" />
+					<div class="svg-aside">
+						<img class="blue-blob" src="../img/blue-blob.svg" alt="Blue Blob" />
+						<img src="../img/login-aside.svg" alt="Login" class="login-aside" />
+					</div>
 				</div>
 
 				<div class="form-container">
@@ -49,9 +58,16 @@
 						/>
 						<h1 class="header__heading">wearly</h1>
 					</div>
-					<form class="login-form" action="">
+					<form
+						class="login-form"
+						action=""
+						method="post"
+						onsubmit="return validateLoginForm()"
+						novalidate
+					>
 						<div class="email-field input-field-container">
-							<i class="fa-solid fa-user input-field-icon"></i>
+							<span class="error-message">This field cannot be empty</span>
+							<i class="fa-solid fa-envelope input-field-icon login-email"></i>
 							<input
 								type="email"
 								name="email"
@@ -62,7 +78,8 @@
 						</div>
 
 						<div class="password-field input-field-container">
-							<i class="fa-solid fa-key input-field-icon"></i>
+							<span class="error-message">This field cannot be empty</span>
+							<i class="fa-solid fa-key input-field-icon login-pass"></i>
 							<input
 								type="password"
 								name="password"
@@ -72,13 +89,37 @@
 							/>
 						</div>
 
-						<button type="submit" class="btn btn-primary submit-button">
+						<div class="exp">
+							<div class="checkbox">
+								<form>
+									<div>
+										<input
+											type="checkbox"
+											id="check"
+											name="check"
+											class="terms-checkbox"
+											value=""
+											required
+										/>
+										<label class="label-checkmark" for="check">
+											<span class="checkmark"></span>
+											<p>Remember Me</p>
+										</label>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<button
+							type="submit"
+							class="btn btn-primary btn-login submit-button"
+						>
 							Login
 						</button>
 					</form>
-					<div class="redirect-text">
+					<div class="redirect-text to-signup">
 						<p>Don't have an account?</p>
-						<a class="redirect-sign-up" href="#">Sign Up</a>
+						<a class="redirect-sign-up" href="register.html">Sign Up</a>
 					</div>
 				</div>
 			</section>

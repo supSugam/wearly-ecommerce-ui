@@ -19,25 +19,28 @@
 		/>
 		<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-		<script defer src="../js/effects.js"></script>
-		<script defer src="../js/script.js"></script>
 		<link rel="stylesheet" href="../css/styles.css" />
 		<link rel="stylesheet" href="../css/general.css" />
 		<link rel="stylesheet" href="../css/effects.css" />
 		<link rel="stylesheet" href="../css/login.css" />
+
+		<!-- JavaScript -->
+		<script defer src="../js/view/effects.js"></script>
+		<script defer src="../js/view/formView.js"></script>
+		<script defer src="../js/view/imageView.js"></script>
+		<script defer src="../js/view/passwordToggler.js"></script>
+		<script defer src="../js/view/product-card-view.js"></script>
+		<script defer src="../js/controller/formControllers.js"></script>
+		<script defer src="../js/controller/loader.js"></script>
 	</head>
 	<body>
 		<div class="goIn-container container-signup">
-			<div class="go-back-main">
-				<a href="index.html">
-					<i class="fas fa-arrow-left"></i>
-					Explore Products Without Logging In
-				</a>
-			</div>
 			<section class="form-section signup-section">
 				<div class="svg-half">
-					<img class="blue-blob" src="../img/blue-blob.svg" alt="Blue Blob" />
-					<img src="../img/login-aside.svg" alt="Login" class="login-aside" />
+					<div class="svg-aside">
+						<img class="blue-blob" src="../img/blue-blob.svg" alt="Blue Blob" />
+						<img src="../img/login-aside.svg" alt="Login" class="login-aside" />
+					</div>
 				</div>
 
 				<div class="form-container">
@@ -50,10 +53,18 @@
 						<h1 class="header__heading">wearly</h1>
 					</div>
 
-					<form action="" class="signup-form">
+					<form
+						action=""
+						method="post"
+						class="signup-form"
+						name="signup-form"
+						onsubmit="return validateSignupForm()"
+						novalidate
+					>
 						<div class="signup-tab">
 							<div class="name-fields input-field-container">
 								<div class="first-name-field input-field-container">
+									<span class="error-message">This field cannot be empty</span>
 									<i class="input-field-icon fas fa-user"></i>
 									<input
 										type="text"
@@ -65,6 +76,8 @@
 									/>
 								</div>
 								<div class="last-name-field input-field-container">
+									<span class="error-message">This field cannot be empty</span>
+
 									<i class="input-field-icon fas fa-user"></i>
 									<input
 										type="text"
@@ -78,6 +91,8 @@
 							</div>
 
 							<div class="email-field input-field-container">
+								<span class="error-message">This field cannot be empty</span>
+
 								<i class="input-field-icon fas fa-envelope"></i>
 								<input
 									type="email"
@@ -91,6 +106,8 @@
 
 							<div class="credentials-fields input-field-container">
 								<div class="phone-field input-field-container">
+									<span class="error-message">This field cannot be empty</span>
+
 									<i class="input-field-icon fas fa-phone"></i>
 									<input
 										type="tel"
@@ -102,61 +119,82 @@
 									/>
 								</div>
 								<div class="password-field input-field-container">
+									<span class="error-message">This field cannot be empty</span>
+
 									<i class="fa-solid fa-key input-field-icon"></i>
+									<div class="toggle-password-view">
+										<i class="ph-fill ph-eye"></i>
+										<i class="ph-fill ph-eye-slash hidden"></i>
+									</div>
 									<input
 										type="password"
 										name="password"
 										placeholder="Password"
 										required
 										class="input-field"
+										maxlength="50"
+										minlength="12"
 									/>
 								</div>
 							</div>
 
-							<div class="image-upload">
+							<div class="profile-upload input-field-container">
+								<span class="error-message">This field cannot be empty</span>
 								<div class="avatar-upload">
 									<div class="avatar-edit">
 										<input
 											type="file"
-											id="imageUpload"
-											accept=".png, .jpg, .jpeg"
+											id="profileUpload"
+											accept="image/*"
 											required
 										/>
-										<label for="imageUpload"></label>
+										<label for="profileUpload"></label>
 									</div>
 									<div class="avatar-preview">
 										<div
 											id="imagePreview"
-											style="background-image: url(../img/hero-guy.png)"
+											class="default-avatar"
+											style="background-image: url(../img/upload-image.gif)"
 										></div>
 									</div>
 								</div>
 							</div>
 
-							<button type="submit" class="btn btn-primary submit-button">
+							<div class="exp">
+								<div class="checkbox">
+									<form>
+										<div>
+											<input
+												type="checkbox"
+												id="check"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="check">
+												<span class="checkmark"></span>
+												<p>
+													I agree to the
+													<u>terms and conditions</u> of Wearly Pvt. Ltd.
+												</p>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<button
+								type="submit"
+								class="btn btn-primary submit-button btn-signup"
+							>
 								Sign Up
 							</button>
-							<!-- <div class="photo-field input-field-container">
-								<i class="input-field-icon fas fa-camera"></i>
-								<label for="photo-upload" class="photo-upload-label"
-									>Upload Photo</label
-								>
-								<input
-									type="file"
-									id="photo-upload"
-									name="photo-upload"
-									accept="image/*"
-									class="input-field"
-								/>
-								<div class="photo-preview-container">
-									<img class="photo-preview" src="#" alt="Photo Preview" />
-								</div> 
-                            </div> -->
 						</div>
 					</form>
-					<div class="redirect-text">
+					<div class="redirect-text to-login">
 						<p>Have an account already?</p>
-						<a class="redirect-sign-up" href="#">Log In</a>
+						<a class="redirect-sign-up" href="login.html">Log In</a>
 					</div>
 				</div>
 			</section>

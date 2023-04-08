@@ -39,22 +39,31 @@
 .login-aside {
 	position: relative;
 	height: 100%;
-	width: 85%;
+	width: 100%;
 	margin: auto;
 	z-index: 3;
+}
+
+.svg-aside {
+	height: 100%;
+	width: 100%;
 }
 
 .svg-half {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	display: flex;
+	gap: 2.4rem;
+	flex-direction: column;
+	align-items: center;
 }
 
 .blue-blob {
 	position: absolute;
-	top: 0;
-	right: -12rem;
-	height: 50rem;
+	top: 4%;
+	right: -33%;
+	height: 96%;
 	z-index: 1;
 }
 
@@ -74,29 +83,35 @@
 .input-field::placeholder {
 	color: #999;
 }
-.submit-button {
-	width: 100%;
-	font-weight: 700;
-}
 
-.submit-button:hover {
-	background-color: #66a3ff;
+.btn-signup {
+	width: 100%;
+}
+.btn-login {
+	width: 80%;
 }
 
 .redirect-text {
 	background-color: #f1f5f9;
 	border: 1px solid #0000001b;
 	border-radius: 1rem;
-	width: 80%;
 	padding: 1.8rem 0;
 	font-size: 1.8rem;
-	margin: 3rem 0 0 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
 	flex-direction: column;
+	margin: 3rem 0 0 0;
+	width: 80%;
 }
+
+.redirect-text.to-login {
+	margin: 0;
+}
+/* .redirect-text.to-signup {
+	width: 100%;
+} */
 
 .redirect-sign-up {
 	font-size: 1.6rem;
@@ -116,10 +131,12 @@
 .login-form,
 .signup-form {
 	width: 80%;
+	z-index: 21;
 }
 
 .input-field-container {
 	position: relative;
+	transition: all 0.4s ease-in;
 }
 
 .input-field {
@@ -151,6 +168,7 @@
 	font-size: 1.8rem;
 }
 
+.password-field .login-pass,
 .email-field .input-field-icon {
 	left: 4%;
 }
@@ -193,27 +211,11 @@
 }
 
 .submit-button {
-	width: 100%;
 	font-weight: 700;
 }
 
 .submit-button:hover {
 	background-color: #66a3ff;
-}
-
-.redirect-text {
-	background-color: #f1f5f9;
-	border: 1px solid #0000001b;
-	border-radius: 1rem;
-	width: 80%;
-	padding: 1.8rem 0;
-	font-size: 1.8rem;
-	margin: 3rem 0 0 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	flex-direction: column;
 }
 
 .redirect-login {
@@ -313,8 +315,142 @@
 	background-position: center;
 }
 
-.image-upload {
+.profile-upload {
 	position: relative;
 	width: 0;
 	height: 0;
+	cursor: pointer;
+}
+
+#imagePreview {
+	display: flex;
+	justify-content: center;
+}
+
+.avatar-preview:has(div.default-avatar) {
+	padding: 2rem;
+}
+/*  */
+.exp {
+	display: table;
+	margin-bottom: 1.8rem;
+	z-index: 9;
+	position: relative;
+}
+
+.exp .checkbox {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+}
+
+.checkbox div label {
+	display: inline-flex;
+	color: #3d495c;
+	cursor: pointer;
+	position: relative;
+}
+
+.checkmark {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+	font-size: 16px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid #374151;
+	transition: background-color 150ms 200ms,
+		transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+	background-color: white;
+	position: relative;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked + label .checkmark {
+	background-color: #374151;
+	color: #fff;
+	transform: scale(1.1);
+}
+
+input[type="checkbox"]:checked + label .checkmark::before {
+	content: "\f00c";
+	animation: tick 0.3s forwards;
+}
+
+input[type="checkbox"]:not(:checked) + label .checkmark::before {
+	content: "";
+}
+
+.checkmark::before {
+	position: absolute;
+}
+
+.label-checkmark {
+	display: flex;
+	gap: 1.2rem;
+	align-items: center;
+}
+
+.label-checkmark p {
+	font-size: 1.6rem;
+}
+
+@keyframes tick {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* 
+Form Validation
+*/
+
+.error {
+	border: 1px solid rgba(255, 0, 0, 0.505);
+	transition: all 0.4s ease-in-out;
+}
+
+.error-image {
+	background-color: rgb(255, 108, 108);
+}
+
+.error-checkbox {
+	color: rgba(255, 0, 0, 0.505);
+}
+
+.error-message {
+	position: absolute;
+	top: -2rem;
+	display: block;
+	opacity: 0;
+	color: rgba(255, 0, 0, 0.505);
+	font-size: 1.4rem;
+}
+
+.error-message.show {
+	opacity: 1;
+}
+
+.hidden {
+	display: none;
+}
+.toggle-password-view {
+	position: absolute;
+	top: 19%;
+	right: 4%;
+	font-size: 1.8rem;
+	color: #4b5563;
+	cursor: pointer;
 }

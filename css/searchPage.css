@@ -1,0 +1,23 @@
+.search-section {
+	background-color: #f8cbcb;
+	min-width: 100%;
+	height: 80rem;
+	border-radius: 2.4rem;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 1fr 12fr;
+	align-items: center;
+	justify-items: center;
+}
+
+.search-page-icons {
+	font-size: 2.8rem;
+	color: #1e293b;
+}
+
+.search-filter-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.8rem;
+}
