@@ -31,6 +31,9 @@
 		<script defer src="../js/view/passwordToggler.js"></script>
 		<script defer src="../js/view/product-card-view.js"></script>
 		<script defer src="../js/controller/formControllers.js"></script>
+		<script defer src="../js/view/sortBy.js"></script>
+		<script defer src="../js/view/filterOptions.js"></script>
+		<script defer src="../js/view/priceRange.js"></script>
 
 		<script defer src="../js/controller/loader.js"></script>
 	</head>
@@ -104,16 +107,101 @@
 			</div>
 		</header>
 
-		<main>
-			<div class="search-container container">
+		<main class="container section-search">
+			<section class="section-related">
+				<span class="small-heading">Related Categories</span>
+				<div class="search-related-category">
+					<div class="btn category-button"><span class="description-text">Men</span></div>
+					<div class="btn category-button"><span class="description-text">Women</span></div>
+					<div class="btn category-button"><span class="description-text">Kids</span></div>
+					<div class="btn category-button"><span class="description-text">Cosplay</span></div>
+					<div class="btn category-button"><span class="description-text">Formals</span></div>
+					<div class="btn category-button"><span class="description-text">Traditional</span></div>
+					<div class="btn category-button"><span class="description-text">Streetwear</span></div>
+					<div class="btn category-button"><span class="description-text">Sportswear</span></div>
+				</div>
+			</section>
+
+
+			<div class="search-container">
 				<div class="search-section">
-					<div class="search-filters">
-						<div class="search-filter-heading">
+					<div class="search-filters grey-gradient">
+						<div class="search-filter-header">
 							<i class="ph-fill ph-faders search-page-icons"></i>
-							<h1 class="heading-tertiary">Filters</h1>
+							<h1 class="search-heading-text">Filters</h1>
+							<button class="btn btn-search-reset">
+								<i class="fa-solid fa-rotate-left search-page-icons"></i>
+							</button>
 						</div>
 					</div>
-					<div class="search-results"></div>
+					<div class="search-results grey-gradient">
+						<div class="search-results-header">
+							<i class="fa-regular fa-square-poll-horizontal search-page-icons"></i>
+							<h1 class="search-heading-text">970 Search Results for T-Shirt</h1>
+						</div>
+						<div class="dropdown-wrapper">
+							<div class="sort-by">
+								<p class="search-heading-text">Sort By</p>
+							</div>
+							<button class="dropdown-btn">
+							  <span class="selected-option">Relevance</span>
+							  <i class="fa-solid fa-caret-down"></i>
+							</button>
+							<ul class="dropdown-menu">
+							  <li class="dropdown-option selected" data-value="Relevance"><i class="fa-solid fa-bullseye-arrow"></i>Relevance</li>
+							  <li class="dropdown-option" data-value="Price"><i class="fa-solid fa-circle-dollar"></i>Price</li>
+							  <li class="dropdown-option" data-value="Rating"><i class="fa-sharp fa-solid fa-face-smile"></i>Rating</li>
+							</ul>
+						</div>
+					</div>
+					<div class="filter-options">
+
+
+						<div class="price-field-wrapper">
+							<div class="filter-heading">
+							  <h2>Price Range</h2>
+							</div>
+							<div class="price-input">
+								<div class="price-input-field">
+								<input readonly type="number" class="input-min quantity-input" value="" placeholder="Min">
+							</div>
+							  <div class="separator">
+								<i class="fa-regular fa-hyphen"></i>
+							  </div>
+							  <div class="price-input-field">
+								<input readonly type="number" class="input-max quantity-input" value="" placeholder="Max">
+							  </div>
+							</div>
+							<div class="price-slider">
+							  <div class="progress"></div>
+							</div>
+							<div class="range-input">
+							  <input type="range"  class="range-min" min="0" max="10000" value="0" step="100">
+							  <input type="range"  class="range-max" min="0" max="10000" value="10000" step="100">
+							</div>
+							<p class="slider-info-text">Use Slider to Control the Price.</p>
+						</div>
+
+						<div class="category-wrapper">
+							<ul class="category-list">
+								<li>
+									<div class="category-title">
+										<div>
+											<i class="fa-solid fa-tags"></i>
+											Category
+										</div>
+										<i class="fa fa-caret-down"></i>
+									</div>
+									<ul class="submenu">
+									  <li><a href="#">Photoshop</a></li>
+									  <li><a href="#">HTML</a></li>
+									  <li><a href="#">CSS</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					  
+					</div>
 				</div>
 			</div>
 		</main>
