@@ -197,10 +197,10 @@ Sort Button
 	font-weight: bold;
 }
 
-.selected-option .fa-caret-down {
+.dropdown-btn .fa-caret-down {
 	position: absolute;
 	top: 50%;
-	right: 10px;
+	right: 1rem;
 	transform: translateY(-50%);
 	transition: all 0.3s ease;
 }
@@ -229,7 +229,7 @@ SideBar
 	width: 100%;
 	background: #fff;
 	border-radius: 10px;
-	padding: 2rem 2.5rem 4rem;
+	padding: 2rem 2.5rem 0;
 }
 
 .price-input {
@@ -327,7 +327,7 @@ input[type="range"]::-moz-range-thumb {
 .filter-options {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	gap: 4rem;
 	height: 100%;
 	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
@@ -338,28 +338,96 @@ Sort by Category
 .category-wrapper {
 	width: 100%;
 	height: 100%;
-	margin: 3rem 0;
-	background: #f8dede;
-	padding: 2rem 2.5rem 4rem;
+	/* margin: 1rem 0; */
 }
 
 .category-list {
 	width: 100%;
 	list-style: none;
-	font-size: 2rem;
+	font-size: 2.4rem;
+	margin-bottom: 3rem;
+
+	/* padding: 2rem 0 4rem; */
 }
 
 .category-title {
+	width: 100%;
+	justify-content: space-between;
 	display: flex;
 	align-items: center;
-	gap: 9rem;
 	padding: 1rem 0;
+	border-bottom: 1px solid #ebedf5;
+	border-top: 1px solid #ebedf5;
+	padding: 1rem 2rem;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 
+.category-title div {
+	font-size: 2rem;
+}
 .category-title i {
-	font-size: 1.4rem;
+	font-size: 1.8rem;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.category-title div i {
+	font-size: 1.6rem;
+	margin-right: 4px;
 }
 
 .category-list li:first-child .link {
 	border-top: 1px solid #ebedf5;
+}
+
+.category-list li.open .category-title {
+	font-weight: 600;
+}
+
+.category-list li.open .category-title .fa-caret-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.category-options {
+	display: none;
+	font-size: 1.4rem;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.category-option {
+	padding: 1.6rem 0 1.6rem 3rem;
+	border-bottom: 1px solid #ebedf5;
+	cursor: pointer;
+}
+
+.category-option:hover {
+	background-color: #f2f2f2;
+}
+
+.category-option label .checkmark {
+	width: 2rem;
+	height: 2rem;
+}
+.category-list li.open .category-options {
+	display: block;
+}
+
+/* 
+Search Result
+*/
+
+.search-results-content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 6rem;
+	padding: 4rem;
 }

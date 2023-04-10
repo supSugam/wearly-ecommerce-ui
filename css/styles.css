@@ -569,8 +569,7 @@ Quantity Box
 .quantity-text {
 	font-size: 1.8rem;
 }
-
-.quantity-input {
+.quantity-input-price, .quantity-input {
 	display: flex;
 	align-items: center;
 	justify-content: center;

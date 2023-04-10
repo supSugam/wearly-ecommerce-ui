@@ -54,12 +54,10 @@ const validateSignupForm = function () {
 		checkCheckBox();
 	});
 
-	if (!isValid) {
-		return false;
-	}
+	if (!isValid) return false;
 
 	document.querySelector(".btn-signup").innerHTML =
-		'Signing Up <i class="fa-duotone fa-spinner-third fa-spin"></i>';
+		'Signing Up.. <i class="fa-duotone fa-spinner-third fa-spin"></i>';
 
 	// submit form if validation is successful
 	return true;

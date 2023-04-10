@@ -3,9 +3,6 @@
 const cartQuantityHandler = function () {
 	const quantityInputs = document.querySelectorAll(".quantity-input");
 
-	// AVoiding conflict between cart quantity input and price range input
-	if (quantityInputs[0].classList.contains("input-min")) return;
-
 	quantityInputs.forEach((input) => {
 		const minusBtn = input.querySelector(".minus");
 		const plusBtn = input.querySelector(".plus");

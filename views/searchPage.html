@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="../css/styles.css" />
 		<link rel="stylesheet" href="../css/effects.css" />
 		<link rel="stylesheet" href="../css/searchPage.css" />
+		<link rel="stylesheet" href="../css/login.css" />
 
 		<script defer src="../js/view/effects.js"></script>
 		<script defer src="../js/view/formView.js"></script>
@@ -36,6 +37,7 @@
 		<script defer src="../js/view/priceRange.js"></script>
 
 		<script defer src="../js/controller/loader.js"></script>
+		<script defer src="../js/view/categoryDropdown.js"></script>
 	</head>
 	<body>
 
@@ -163,13 +165,13 @@
 							</div>
 							<div class="price-input">
 								<div class="price-input-field">
-								<input readonly type="number" class="input-min quantity-input" value="" placeholder="Min">
+								<input readonly type="number" class="input-min quantity-input-price" value="" placeholder="Min">
 							</div>
 							  <div class="separator">
 								<i class="fa-regular fa-hyphen"></i>
 							  </div>
 							  <div class="price-input-field">
-								<input readonly type="number" class="input-max quantity-input" value="" placeholder="Max">
+								<input readonly type="number" class="input-max quantity-input-price" value="" placeholder="Max">
 							  </div>
 							</div>
 							<div class="price-slider">
@@ -180,11 +182,11 @@
 							  <input type="range"  class="range-max" min="0" max="10000" value="10000" step="100">
 							</div>
 							<p class="slider-info-text">Use Slider to Control the Price.</p>
-						</div>
+						</div>						
 
 						<div class="category-wrapper">
 							<ul class="category-list">
-								<li>
+								<li class="open">
 									<div class="category-title">
 										<div>
 											<i class="fa-solid fa-tags"></i>
@@ -192,15 +194,321 @@
 										</div>
 										<i class="fa fa-caret-down"></i>
 									</div>
-									<ul class="submenu">
-									  <li><a href="#">Photoshop</a></li>
-									  <li><a href="#">HTML</a></li>
-									  <li><a href="#">CSS</a></li>
-									</ul>
+									<ul class="category-options show">
+									  <li class="category-option">
+											<input
+												type="checkbox"
+												id="checkBox-men"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="checkBox-men">
+												<span class="checkmark"></span>
+												<p>Men's Fashion</p>
+											</label>
+									  </li>
+									  <li class="category-option">
+										<input
+											type="checkbox"
+											id="checkBox-women"
+											name="check"
+											class="terms-checkbox"
+											value=""
+											required
+										/>
+										<label class="label-checkmark" for="checkBox-women">
+											<span class="checkmark"></span>
+											<p>Women's Fashion</p>
+										</label>
+									</li>
+									<li class="category-option">
+										<input
+											type="checkbox"
+											id="checkBox-formalwear"
+											name="check"
+											class="terms-checkbox"
+											value=""
+											required
+										/>
+										<label class="label-checkmark" for="checkBox-formalwear">
+											<span class="checkmark"></span>
+											<p>Formalwear</p>
+										</label>
+								  </li>
+								  </ul>
+
+								</li>
+							</ul>
+							<ul class="category-list">
+								<li class="open">
+									<div class="category-title">
+										<div>
+											<i class="fa-solid fa-badge-check"></i>
+											Brands
+										</div>
+										<i class="fa fa-caret-down"></i>
+									</div>
+									<ul class="category-options show">
+									  <li class="category-option">
+											<input
+												type="checkbox"
+												id="checkBox-nike"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="checkBox-nike">
+												<span class="checkmark"></span>
+												<p>Nike</p>
+											</label>
+									  </li>
+									  <li class="category-option">
+										<input
+											type="checkbox"
+											id="checkBox-adidas"
+											name="check"
+											class="terms-checkbox"
+											value=""
+											required
+										/>
+										<label class="label-checkmark" for="checkBox-adidas">
+											<span class="checkmark"></span>
+											<p>Adidas</p>
+										</label>
+									</li>
+									<li class="category-option">
+										<input
+											type="checkbox"
+											id="checkBox-puma"
+											name="check"
+											class="terms-checkbox"
+											value=""
+											required
+										/>
+										<label class="label-checkmark" for="checkBox-puma">
+											<span class="checkmark"></span>
+											<p>Puma</p>
+										</label>
+								  </li>
+								  </ul>
+
 								</li>
 							</ul>
 						</div>
 					  
+					</div>
+
+					<div class="search-results-content">
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-attribute">
+									<i class="ph-fill ph-seal-check"></i>
+									<span class="product-brand">Nike</span>
+								</div>
+	
+								
+								<p class="product-title">Skull Printed T-Shirt</p>
+	
+								<ul class="product-attributes">
+	
+									<li class="product-tags">
+										<span class="tag-content product-type">Tshirts</span>
+										<span class="tag-content product-type">Unisex</span>
+									</li>
+	
+									<li class="product-attribute">
+											<p>Ratings</p>
+										<div class="attribute-boxes product-rating">
+	
+										</div>
+									</li>
+	
+									<li class="product-attribute">
+										Sizes
+										<div class="size-container">
+											<input  id="size-small" name="size" type="radio" value="Small" />
+											<label for="size-small">S</label>
+	
+											<input  id="size-medium" name="size" type="radio" value="Medium" />
+											<label for="size-medium">M</label>
+	
+				
+											<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
+											<label for="size-large">L</label>
+	
+											<input  id="size-xl" name="size" type="radio" value="Extra Large" />
+											<label for="size-xl">XL</label>
+	
+	
+										</div>
+									</li>
+								</ul>
+	
+								<p class="quantity-text">Quantity</p>
+								<div class="add-to-cart">
+									<div class="quantity-input">
+										<button class="quantity-btn minus">-</button>
+										<input class="quantity-value" type="number" value="1" min="1" max="10" readonly>
+										<button class="quantity-btn plus">+</button>
+									  </div>
+	
+									  <button class="btn btn--cart">Add to Cart <i class="ph-fill ph-shopping-cart"></i></button>
+								</div>
+								  
+							</div>
+						</div>
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-attribute">
+									<i class="ph-fill ph-seal-check"></i>
+									<span class="product-brand">Nike</span>
+								</div>
+	
+								
+								<p class="product-title">Skull Printed T-Shirt</p>
+	
+								<ul class="product-attributes">
+	
+									<li class="product-tags">
+										<span class="tag-content product-type">Tshirts</span>
+										<span class="tag-content product-type">Unisex</span>
+									</li>
+	
+									<li class="product-attribute">
+											<p>Ratings</p>
+										<div class="attribute-boxes product-rating">
+	
+										</div>
+									</li>
+	
+									<li class="product-attribute">
+										Sizes
+										<div class="size-container">
+											<input  id="size-small" name="size" type="radio" value="Small" />
+											<label for="size-small">S</label>
+	
+											<input  id="size-medium" name="size" type="radio" value="Medium" />
+											<label for="size-medium">M</label>
+	
+				
+											<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
+											<label for="size-large">L</label>
+	
+											<input  id="size-xl" name="size" type="radio" value="Extra Large" />
+											<label for="size-xl">XL</label>
+	
+	
+										</div>
+									</li>
+								</ul>
+	
+								<p class="quantity-text">Quantity</p>
+								<div class="add-to-cart">
+									<div class="quantity-input">
+										<button class="quantity-btn minus">-</button>
+										<input class="quantity-value" type="number" value="1" min="1" max="10" readonly>
+										<button class="quantity-btn plus">+</button>
+									  </div>
+	
+									  <button class="btn btn--cart">Add to Cart <i class="ph-fill ph-shopping-cart"></i></button>
+								</div>
+								  
+							</div>
+						</div>
+						<div class="product_card">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+							src="../img/product-img/skull-printed-tshirt.jpg"
+							class="product-img"
+							alt="skull-printed-tshirt" />
+							<div class="product_card--content">
+								<div class="product-attribute">
+									<i class="ph-fill ph-seal-check"></i>
+									<span class="product-brand">Nike</span>
+								</div>
+	
+								
+								<p class="product-title">Skull Printed T-Shirt</p>
+	
+								<ul class="product-attributes">
+	
+									<li class="product-tags">
+										<span class="tag-content product-type">Tshirts</span>
+										<span class="tag-content product-type">Unisex</span>
+									</li>
+	
+									<li class="product-attribute">
+											<p>Ratings</p>
+										<div class="attribute-boxes product-rating">
+	
+										</div>
+									</li>
+	
+									<li class="product-attribute">
+										Sizes
+										<div class="size-container">
+											<input  id="size-small" name="size" type="radio" value="Small" />
+											<label for="size-small">S</label>
+	
+											<input  id="size-medium" name="size" type="radio" value="Medium" />
+											<label for="size-medium">M</label>
+	
+				
+											<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
+											<label for="size-large">L</label>
+	
+											<input  id="size-xl" name="size" type="radio" value="Extra Large" />
+											<label for="size-xl">XL</label>
+	
+	
+										</div>
+									</li>
+								</ul>
+	
+								<p class="quantity-text">Quantity</p>
+								<div class="add-to-cart">
+									<div class="quantity-input">
+										<button class="quantity-btn minus">-</button>
+										<input class="quantity-value" type="number" value="1" min="1" max="10" readonly>
+										<button class="quantity-btn plus">+</button>
+									  </div>
+	
+									  <button class="btn btn--cart">Add to Cart <i class="ph-fill ph-shopping-cart"></i></button>
+								</div>
+								  
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
