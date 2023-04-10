@@ -40,7 +40,6 @@
 		<script defer src="../js/view/categoryDropdown.js"></script>
 	</head>
 	<body>
-
 		<header class="header">
 			<div class="header__logo-box">
 				<img
@@ -72,20 +71,19 @@
 			</nav>
 
 			<div class="user__controls">
-			
-			<div class="header__search-box">
-				<form action="" class="search__form">
-					<i class="fa-solid fa-magnifying-glass form-icon gradient-text"></i>
+				<div class="header__search-box">
+					<form action="" class="search__form">
+						<i class="fa-solid fa-magnifying-glass form-icon gradient-text"></i>
 
-					<input
-						class="search__form--input"
-						name="search_term"
-						type="search"
-						placeholder="Search here.."
-						required=""
-					/>
-				</form>
-			</div>
+						<input
+							class="search__form--input"
+							name="search_term"
+							type="search"
+							placeholder="Search here.."
+							required=""
+						/>
+					</form>
+				</div>
 
 				<!-- 
 
@@ -105,7 +103,6 @@
 				</a>  -->
 					<button class="btn btn-primary margin-left">Login</button>
 				</div>
-				</div>
 			</div>
 		</header>
 
@@ -113,17 +110,32 @@
 			<section class="section-related">
 				<span class="small-heading">Related Categories</span>
 				<div class="search-related-category">
-					<div class="btn category-button"><span class="description-text">Men</span></div>
-					<div class="btn category-button"><span class="description-text">Women</span></div>
-					<div class="btn category-button"><span class="description-text">Kids</span></div>
-					<div class="btn category-button"><span class="description-text">Cosplay</span></div>
-					<div class="btn category-button"><span class="description-text">Formals</span></div>
-					<div class="btn category-button"><span class="description-text">Traditional</span></div>
-					<div class="btn category-button"><span class="description-text">Streetwear</span></div>
-					<div class="btn category-button"><span class="description-text">Sportswear</span></div>
+					<div class="btn category-button">
+						<span class="description-text">Men</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Women</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Kids</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Cosplay</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Formals</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Traditional</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Streetwear</span>
+					</div>
+					<div class="btn category-button">
+						<span class="description-text">Sportswear</span>
+					</div>
 				</div>
 			</section>
-
 
 			<div class="search-container">
 				<div class="search-section">
@@ -136,53 +148,88 @@
 							</button>
 						</div>
 					</div>
+
 					<div class="search-results grey-gradient">
 						<div class="search-results-header">
-							<i class="fa-regular fa-square-poll-horizontal search-page-icons"></i>
-							<h1 class="search-heading-text">970 Search Results for T-Shirt</h1>
+							<i
+								class="fa-regular fa-square-poll-horizontal search-page-icons"
+							></i>
+							<h1 class="search-heading-text">
+								970 Search Results for T-Shirt
+							</h1>
 						</div>
 						<div class="dropdown-wrapper">
 							<div class="sort-by">
 								<p class="search-heading-text">Sort By</p>
 							</div>
 							<button class="dropdown-btn">
-							  <span class="selected-option">Relevance</span>
-							  <i class="fa-solid fa-caret-down"></i>
+								<span class="selected-option">Relevance</span>
+								<i class="fa-solid fa-caret-down"></i>
 							</button>
 							<ul class="dropdown-menu">
-							  <li class="dropdown-option selected" data-value="Relevance"><i class="fa-solid fa-bullseye-arrow"></i>Relevance</li>
-							  <li class="dropdown-option" data-value="Price"><i class="fa-solid fa-circle-dollar"></i>Price</li>
-							  <li class="dropdown-option" data-value="Rating"><i class="fa-sharp fa-solid fa-face-smile"></i>Rating</li>
+								<li class="dropdown-option selected" data-value="Relevance">
+									<i class="fa-solid fa-bullseye-arrow"></i>Relevance
+								</li>
+								<li class="dropdown-option" data-value="Price">
+									<i class="fa-solid fa-circle-dollar"></i>Price
+								</li>
+								<li class="dropdown-option" data-value="Rating">
+									<i class="fa-sharp fa-solid fa-face-smile"></i>Rating
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="filter-options">
-
-
 						<div class="price-field-wrapper">
 							<div class="filter-heading">
-							  <h2>Price Range</h2>
+								<h2>Price Range</h2>
 							</div>
 							<div class="price-input">
 								<div class="price-input-field">
-								<input readonly type="number" class="input-min quantity-input-price" value="" placeholder="Min">
-							</div>
-							  <div class="separator">
-								<i class="fa-regular fa-hyphen"></i>
-							  </div>
-							  <div class="price-input-field">
-								<input readonly type="number" class="input-max quantity-input-price" value="" placeholder="Max">
-							  </div>
+									<input
+										readonly
+										type="number"
+										class="input-min quantity-input-price"
+										value=""
+										placeholder="Min"
+									/>
+								</div>
+								<div class="separator">
+									<i class="fa-regular fa-hyphen"></i>
+								</div>
+								<div class="price-input-field">
+									<input
+										readonly
+										type="number"
+										class="input-max quantity-input-price"
+										value=""
+										placeholder="Max"
+									/>
+								</div>
 							</div>
 							<div class="price-slider">
-							  <div class="progress"></div>
+								<div class="progress"></div>
 							</div>
 							<div class="range-input">
-							  <input type="range"  class="range-min" min="0" max="10000" value="0" step="100">
-							  <input type="range"  class="range-max" min="0" max="10000" value="10000" step="100">
+								<input
+									type="range"
+									class="range-min"
+									min="0"
+									max="10000"
+									value="0"
+									step="100"
+								/>
+								<input
+									type="range"
+									class="range-max"
+									min="0"
+									max="10000"
+									value="10000"
+									step="100"
+								/>
 							</div>
 							<p class="slider-info-text">Use Slider to Control the Price.</p>
-						</div>						
+						</div>
 
 						<div class="category-wrapper">
 							<ul class="category-list">
@@ -195,7 +242,7 @@
 										<i class="fa fa-caret-down"></i>
 									</div>
 									<ul class="category-options show">
-									  <li class="category-option">
+										<li class="category-option">
 											<input
 												type="checkbox"
 												id="checkBox-men"
@@ -208,37 +255,36 @@
 												<span class="checkmark"></span>
 												<p>Men's Fashion</p>
 											</label>
-									  </li>
-									  <li class="category-option">
-										<input
-											type="checkbox"
-											id="checkBox-women"
-											name="check"
-											class="terms-checkbox"
-											value=""
-											required
-										/>
-										<label class="label-checkmark" for="checkBox-women">
-											<span class="checkmark"></span>
-											<p>Women's Fashion</p>
-										</label>
-									</li>
-									<li class="category-option">
-										<input
-											type="checkbox"
-											id="checkBox-formalwear"
-											name="check"
-											class="terms-checkbox"
-											value=""
-											required
-										/>
-										<label class="label-checkmark" for="checkBox-formalwear">
-											<span class="checkmark"></span>
-											<p>Formalwear</p>
-										</label>
-								  </li>
-								  </ul>
-
+										</li>
+										<li class="category-option">
+											<input
+												type="checkbox"
+												id="checkBox-women"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="checkBox-women">
+												<span class="checkmark"></span>
+												<p>Women's Fashion</p>
+											</label>
+										</li>
+										<li class="category-option">
+											<input
+												type="checkbox"
+												id="checkBox-formalwear"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="checkBox-formalwear">
+												<span class="checkmark"></span>
+												<p>Formalwear</p>
+											</label>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<ul class="category-list">
@@ -251,7 +297,7 @@
 										<i class="fa fa-caret-down"></i>
 									</div>
 									<ul class="category-options show">
-									  <li class="category-option">
+										<li class="category-option">
 											<input
 												type="checkbox"
 												id="checkBox-nike"
@@ -264,41 +310,39 @@
 												<span class="checkmark"></span>
 												<p>Nike</p>
 											</label>
-									  </li>
-									  <li class="category-option">
-										<input
-											type="checkbox"
-											id="checkBox-adidas"
-											name="check"
-											class="terms-checkbox"
-											value=""
-											required
-										/>
-										<label class="label-checkmark" for="checkBox-adidas">
-											<span class="checkmark"></span>
-											<p>Adidas</p>
-										</label>
-									</li>
-									<li class="category-option">
-										<input
-											type="checkbox"
-											id="checkBox-puma"
-											name="check"
-											class="terms-checkbox"
-											value=""
-											required
-										/>
-										<label class="label-checkmark" for="checkBox-puma">
-											<span class="checkmark"></span>
-											<p>Puma</p>
-										</label>
-								  </li>
-								  </ul>
-
+										</li>
+										<li class="category-option">
+											<input
+												type="checkbox"
+												id="checkBox-adidas"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="checkBox-adidas">
+												<span class="checkmark"></span>
+												<p>Adidas</p>
+											</label>
+										</li>
+										<li class="category-option">
+											<input
+												type="checkbox"
+												id="checkBox-puma"
+												name="check"
+												class="terms-checkbox"
+												value=""
+												required
+											/>
+											<label class="label-checkmark" for="checkBox-puma">
+												<span class="checkmark"></span>
+												<p>Puma</p>
+											</label>
+										</li>
+									</ul>
 								</li>
 							</ul>
 						</div>
-					  
 					</div>
 
 					<div class="search-results-content">
@@ -311,64 +355,87 @@
 								</p>
 							</div>
 							<img
-							src="../img/product-img/skull-printed-tshirt.jpg"
-							class="product-img"
-							alt="skull-printed-tshirt" />
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
 							<div class="product_card--content">
 								<div class="product-attribute">
 									<i class="ph-fill ph-seal-check"></i>
 									<span class="product-brand">Nike</span>
 								</div>
-	
-								
+
 								<p class="product-title">Skull Printed T-Shirt</p>
-	
+
 								<ul class="product-attributes">
-	
 									<li class="product-tags">
 										<span class="tag-content product-type">Tshirts</span>
 										<span class="tag-content product-type">Unisex</span>
 									</li>
-	
+
 									<li class="product-attribute">
-											<p>Ratings</p>
-										<div class="attribute-boxes product-rating">
-	
-										</div>
+										<p>Ratings</p>
+										<div class="attribute-boxes product-rating"></div>
 									</li>
-	
+
 									<li class="product-attribute">
 										Sizes
 										<div class="size-container">
-											<input  id="size-small" name="size" type="radio" value="Small" />
+											<input
+												id="size-small"
+												name="size"
+												type="radio"
+												value="Small"
+											/>
 											<label for="size-small">S</label>
-	
-											<input  id="size-medium" name="size" type="radio" value="Medium" />
+
+											<input
+												id="size-medium"
+												name="size"
+												type="radio"
+												value="Medium"
+											/>
 											<label for="size-medium">M</label>
-	
-				
-											<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
+
+											<input
+												id="size-large"
+												name="size"
+												type="radio"
+												value="Large"
+												checked="checked"
+											/>
 											<label for="size-large">L</label>
-	
-											<input  id="size-xl" name="size" type="radio" value="Extra Large" />
+
+											<input
+												id="size-xl"
+												name="size"
+												type="radio"
+												value="Extra Large"
+											/>
 											<label for="size-xl">XL</label>
-	
-	
 										</div>
 									</li>
 								</ul>
-	
+
 								<p class="quantity-text">Quantity</p>
 								<div class="add-to-cart">
 									<div class="quantity-input">
 										<button class="quantity-btn minus">-</button>
-										<input class="quantity-value" type="number" value="1" min="1" max="10" readonly>
+										<input
+											class="quantity-value"
+											type="number"
+											value="1"
+											min="1"
+											max="10"
+											readonly
+										/>
 										<button class="quantity-btn plus">+</button>
-									  </div>
-	
-									  <button class="btn btn--cart">Add to Cart <i class="ph-fill ph-shopping-cart"></i></button>
+									</div>
+
+									<button class="btn btn--cart">
+										Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+									</button>
 								</div>
-								  
 							</div>
 						</div>
 						<div class="product_card">
@@ -380,64 +447,87 @@
 								</p>
 							</div>
 							<img
-							src="../img/product-img/skull-printed-tshirt.jpg"
-							class="product-img"
-							alt="skull-printed-tshirt" />
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
 							<div class="product_card--content">
 								<div class="product-attribute">
 									<i class="ph-fill ph-seal-check"></i>
 									<span class="product-brand">Nike</span>
 								</div>
-	
-								
+
 								<p class="product-title">Skull Printed T-Shirt</p>
-	
+
 								<ul class="product-attributes">
-	
 									<li class="product-tags">
 										<span class="tag-content product-type">Tshirts</span>
 										<span class="tag-content product-type">Unisex</span>
 									</li>
-	
+
 									<li class="product-attribute">
-											<p>Ratings</p>
-										<div class="attribute-boxes product-rating">
-	
-										</div>
+										<p>Ratings</p>
+										<div class="attribute-boxes product-rating"></div>
 									</li>
-	
+
 									<li class="product-attribute">
 										Sizes
 										<div class="size-container">
-											<input  id="size-small" name="size" type="radio" value="Small" />
+											<input
+												id="size-small"
+												name="size"
+												type="radio"
+												value="Small"
+											/>
 											<label for="size-small">S</label>
-	
-											<input  id="size-medium" name="size" type="radio" value="Medium" />
+
+											<input
+												id="size-medium"
+												name="size"
+												type="radio"
+												value="Medium"
+											/>
 											<label for="size-medium">M</label>
-	
-				
-											<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
+
+											<input
+												id="size-large"
+												name="size"
+												type="radio"
+												value="Large"
+												checked="checked"
+											/>
 											<label for="size-large">L</label>
-	
-											<input  id="size-xl" name="size" type="radio" value="Extra Large" />
+
+											<input
+												id="size-xl"
+												name="size"
+												type="radio"
+												value="Extra Large"
+											/>
 											<label for="size-xl">XL</label>
-	
-	
 										</div>
 									</li>
 								</ul>
-	
+
 								<p class="quantity-text">Quantity</p>
 								<div class="add-to-cart">
 									<div class="quantity-input">
 										<button class="quantity-btn minus">-</button>
-										<input class="quantity-value" type="number" value="1" min="1" max="10" readonly>
+										<input
+											class="quantity-value"
+											type="number"
+											value="1"
+											min="1"
+											max="10"
+											readonly
+										/>
 										<button class="quantity-btn plus">+</button>
-									  </div>
-	
-									  <button class="btn btn--cart">Add to Cart <i class="ph-fill ph-shopping-cart"></i></button>
+									</div>
+
+									<button class="btn btn--cart">
+										Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+									</button>
 								</div>
-								  
 							</div>
 						</div>
 						<div class="product_card">
@@ -449,64 +539,87 @@
 								</p>
 							</div>
 							<img
-							src="../img/product-img/skull-printed-tshirt.jpg"
-							class="product-img"
-							alt="skull-printed-tshirt" />
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
 							<div class="product_card--content">
 								<div class="product-attribute">
 									<i class="ph-fill ph-seal-check"></i>
 									<span class="product-brand">Nike</span>
 								</div>
-	
-								
+
 								<p class="product-title">Skull Printed T-Shirt</p>
-	
+
 								<ul class="product-attributes">
-	
 									<li class="product-tags">
 										<span class="tag-content product-type">Tshirts</span>
 										<span class="tag-content product-type">Unisex</span>
 									</li>
-	
+
 									<li class="product-attribute">
-											<p>Ratings</p>
-										<div class="attribute-boxes product-rating">
-	
-										</div>
+										<p>Ratings</p>
+										<div class="attribute-boxes product-rating"></div>
 									</li>
-	
+
 									<li class="product-attribute">
 										Sizes
 										<div class="size-container">
-											<input  id="size-small" name="size" type="radio" value="Small" />
+											<input
+												id="size-small"
+												name="size"
+												type="radio"
+												value="Small"
+											/>
 											<label for="size-small">S</label>
-	
-											<input  id="size-medium" name="size" type="radio" value="Medium" />
+
+											<input
+												id="size-medium"
+												name="size"
+												type="radio"
+												value="Medium"
+											/>
 											<label for="size-medium">M</label>
-	
-				
-											<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
+
+											<input
+												id="size-large"
+												name="size"
+												type="radio"
+												value="Large"
+												checked="checked"
+											/>
 											<label for="size-large">L</label>
-	
-											<input  id="size-xl" name="size" type="radio" value="Extra Large" />
+
+											<input
+												id="size-xl"
+												name="size"
+												type="radio"
+												value="Extra Large"
+											/>
 											<label for="size-xl">XL</label>
-	
-	
 										</div>
 									</li>
 								</ul>
-	
+
 								<p class="quantity-text">Quantity</p>
 								<div class="add-to-cart">
 									<div class="quantity-input">
 										<button class="quantity-btn minus">-</button>
-										<input class="quantity-value" type="number" value="1" min="1" max="10" readonly>
+										<input
+											class="quantity-value"
+											type="number"
+											value="1"
+											min="1"
+											max="10"
+											readonly
+										/>
 										<button class="quantity-btn plus">+</button>
-									  </div>
-	
-									  <button class="btn btn--cart">Add to Cart <i class="ph-fill ph-shopping-cart"></i></button>
+									</div>
+
+									<button class="btn btn--cart">
+										Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+									</button>
 								</div>
-								  
 							</div>
 						</div>
 					</div>
@@ -517,68 +630,108 @@
 		<footer class="footer">
 			<div class="foot-container grid--footer">
 				<div class="contact-col">
-					<img class="footer-img" src="../img/footer-img.svg" alt="Farewell, Reach Me Later!" >
-	
+					<img
+						class="footer-img"
+						src="../img/footer-img.svg"
+						alt="Farewell, Reach Me Later!"
+					/>
+
 					<div class="contact-contents">
-	
-					  <div class="email-info info">
-						<i class="fa-solid fa-envelope footer-icon"></i>
-						<a class="contact-text" href="mailto:hello@sugamsubedi.com.np">hello@wearlycloset.com.np</a>
-					  </div>
-					  
-					  <div class="phone-info info">
-						<i class="fa-duotone fa-phone footer-icon"></i>
-						<a class="contact-text" href="#">Request a Call!</a>
-					  </div>
-					  
-					  <p class="copyright">
-						Copyright © <span class="year">2023</span> by Team Wearly, 
-						All rights reserved.
-					  </p>
+						<div class="email-info info">
+							<i class="fa-solid fa-envelope footer-icon"></i>
+							<a class="contact-text" href="mailto:hello@sugamsubedi.com.np"
+								>hello@wearlycloset.com.np</a
+							>
+						</div>
+
+						<div class="phone-info info">
+							<i class="fa-duotone fa-phone footer-icon"></i>
+							<a class="contact-text" href="#">Request a Call!</a>
+						</div>
+
+						<p class="copyright">
+							Copyright © <span class="year">2023</span> by Team Wearly, All
+							rights reserved.
+						</p>
 					</div>
 				</div>
 
 				<div class="other-col">
-
 					<nav class="pages-col">
-					  <p class="footer-heading ">Pages</p>
-					  <ul class="footer-nav ">
-						<li><a class="footer-link" href="#">Home</a></li>
-						<li><a class="footer-link" href="#services">Products</a></li>
-						<li><a class="footer-link" href="#">Our Partners</a></li>
-						<li><a class="footer-link" href="#cta">Contact</a></li>
-						<li><a class="footer-link" href="#about-me">About Us</a></li>
-					  </ul>
+						<p class="footer-heading">Pages</p>
+						<ul class="footer-nav">
+							<li><a class="footer-link" href="#">Home</a></li>
+							<li><a class="footer-link" href="#services">Products</a></li>
+							<li><a class="footer-link" href="#">Our Partners</a></li>
+							<li><a class="footer-link" href="#cta">Contact</a></li>
+							<li><a class="footer-link" href="#about-me">About Us</a></li>
+						</ul>
 					</nav>
-		  
-		  
+
 					<nav class="socials-col">
-					  <p class="footer-heading">Socials</p>
-					  <ul class="footer-nav">
+						<p class="footer-heading">Socials</p>
+						<ul class="footer-nav">
+							<li>
+								<a
+									class="footer-link footer-link-flex"
+									href="http://www.facebook.com/supSugam"
+									target="_blank"
+									><i class="fa-brands fa-facebook footer-icon-social"></i
+									>Facebook</a
+								>
+							</li>
+							<li>
+								<a
+									class="footer-link footer-link-flex"
+									href="http://www.instagram.com"
+									target="_blank"
+									><i class="fa-brands fa-instagram footer-icon-social"></i
+									>Instagram</a
+								>
+							</li>
 
-						<li><a class="footer-link footer-link-flex" href="http://www.facebook.com/supSugam" target="_blank"><i class="fa-brands fa-facebook footer-icon-social"></i>Facebook</a></li>
-						<li><a class="footer-link footer-link-flex" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram footer-icon-social"></i>Instagram</a></li>
+							<li>
+								<a
+									class="footer-link footer-link-flex"
+									href="http://vt.tiktok.com"
+									target="_blank"
+									><i class="fa-brands fa-tiktok footer-icon-social"></i
+									>Tiktok</a
+								>
+							</li>
 
-					
-						<li><a class="footer-link footer-link-flex" href="http://vt.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok footer-icon-social"></i>Tiktok</a></li>
-
-						
-						<li><a class="footer-link footer-link-flex" href="http://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest footer-icon-social"></i>Pinterest</a></li>
-					  </ul>
+							<li>
+								<a
+									class="footer-link footer-link-flex"
+									href="http://www.pinterest.com"
+									target="_blank"
+									><i class="fa-brands fa-pinterest footer-icon-social"></i
+									>Pinterest</a
+								>
+							</li>
+						</ul>
 					</nav>
-		  
-		  
+
 					<nav class="address-col">
-					  <p class="footer-heading">Our Store Venue</p>
-					  <div class="footer-nav">
-		  
-						<a target="_blank" href="http://goo.gl/maps/F4c6wenwhAkYpGEW8" class="footer-link footer-link-flex line-height-max">Pokhara 7 - Kaski <br>Gandaki, Nepal </a>
-						<a target="_blank" href="http://goo.gl/maps/F4c6wenwhAkYpGEW8" class="footer-link footer-link-flex"><i class="fa-solid fa-location-dot footer-icon-social"></i>View On Maps</a>
-					  </div>
+						<p class="footer-heading">Our Store Venue</p>
+						<div class="footer-nav">
+							<a
+								target="_blank"
+								href="http://goo.gl/maps/F4c6wenwhAkYpGEW8"
+								class="footer-link footer-link-flex line-height-max"
+								>Pokhara 7 - Kaski <br />Gandaki, Nepal
+							</a>
+							<a
+								target="_blank"
+								href="http://goo.gl/maps/F4c6wenwhAkYpGEW8"
+								class="footer-link footer-link-flex"
+								><i class="fa-solid fa-location-dot footer-icon-social"></i>View
+								On Maps</a
+							>
+						</div>
 					</nav>
-				  </div>
+				</div>
 			</div>
-
 		</footer>
 	</body>
 </html>

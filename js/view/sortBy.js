@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 	// Get the dropdown elements
 	const dropdownWrapper = document.querySelector(".dropdown-wrapper");
+	if (!dropdownWrapper) return;
 	const dropdownBtn = dropdownWrapper.querySelector(".dropdown-btn");
 	const dropdownMenu = dropdownWrapper.querySelector(".dropdown-menu");
 	const dropdownOptions = dropdownMenu.querySelectorAll(".dropdown-option");
 
 	// Set default selected option
+
 	let selectedOption = dropdownMenu.querySelector(".selected");
-	if (!selectedOption) return;
 
 	// Function to toggle dropdown
 	function toggleDropdown() {
