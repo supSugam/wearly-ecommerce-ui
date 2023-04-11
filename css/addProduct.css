@@ -55,7 +55,6 @@ Table View
 .table-container {
 	width: 100%;
 	min-height: 100%;
-	background: url(../img/table-background.svg);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -103,3 +102,200 @@ Table View
 	overflow-y: hidden;
 	margin-top: 5px;
 }
+
+/* Add Product Form */
+
+.admin-tools-container {
+	width: 100%;
+	min-height: 120rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url(../img/table-background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.product-form {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product-form-body {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	width: 90rem;
+	gap: 2rem 4rem;
+}
+
+.product-form-body .input-field-icon {
+	color: #4b5563;
+	position: absolute;
+	top: 22%;
+	left: 5%;
+	font-size: 1.8rem;
+}
+
+.product-form-body .input-field {
+	padding-left: 5.4rem;
+}
+
+.input-field-container .input-spinner {
+	position: absolute;
+	right: 3%;
+	top: 6%;
+	display: flex;
+	gap: -1rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-spinner button {
+	padding: 0;
+	font-size: 2rem;
+	cursor: pointer;
+	border: none;
+	background: transparent;
+}
+
+.product-info-container {
+	width: 100%;
+	min-height: 67rem;
+	display: flex;
+	gap: 5rem;
+	flex-direction: column;
+}
+
+.product-category-field {
+	width: 100%;
+	height: 81rem;
+	background: #fff;
+	border-radius: 0.6rem;
+	border: 1px solid #00000020;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 19%);
+}
+
+.product-description-field {
+	min-height: 45%;
+}
+.product-description-field textarea {
+	width: 100%;
+	height: 100%;
+	padding: 2rem 2rem;
+	border-radius: 0.6rem;
+	font-size: 1.7rem;
+	color: #374151;
+	resize: none;
+}
+
+.product-description-field i.input-field-icon {
+	top: 5%;
+	left: 4%;
+}
+
+.product-upload-container {
+	width: 100%;
+	height: 36%;
+	color: inherit;
+	background-color: #f9fafb;
+	border-radius: 0.6rem;
+	border: 1px solid #00000020;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 19%);
+	padding: 3rem;
+}
+
+.product-upload {
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	top: 0%;
+	right: 3%;
+	gap: 2rem;
+	margin-left: 2rem;
+}
+
+.product-upload .product-edit {
+	position: absolute;
+	z-index: 1;
+	top: 5rem;
+	left: 13rem;
+}
+
+.product-upload .product-edit input {
+	display: none;
+}
+
+.product-upload .product-edit input + label {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	margin-bottom: 0;
+	border-radius: 100%;
+	background: #ffffff;
+	border: 1px solid transparent;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	font-weight: normal;
+	transition: all 0.2s ease-in-out;
+	border: 1px solid #4b5563;
+}
+.product-upload .product-edit input + label:hover {
+	background: #f1f1f1;
+	border-color: #d6d6d6;
+}
+.product-upload .product-edit input + label:after {
+	content: "\f040";
+	font-family: "FontAwesome";
+	color: #757575;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: auto;
+}
+
+.product-upload .product-preview {
+	width: 15rem;
+	height: 15rem;
+	position: relative;
+	border-radius: 100%;
+	border: 6px solid #d6d6d6;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+	margin-left: 2.6rem;
+}
+
+.product-upload .product-preview > div {
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#imagePreview {
+	display: flex;
+	justify-content: center;
+}
+
+.product-preview:has(div.default-product) {
+	padding: 2rem;
+}
+.upload-title {
+	font-size: 2rem;
+	color: #374151;
+	font-weight: 600;
+}
+
+.upload-instruction-text {
+	color: #374151;
+}
+
+/* 
+Input Tags
+*/

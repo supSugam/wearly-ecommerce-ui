@@ -414,6 +414,7 @@ Sort by Category
 .option-breakdown {
 	display: none;
 	font-size: 1.4rem;
+	list-style: none;
 	-webkit-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
