@@ -91,7 +91,7 @@
 							</div>
 
 							<div class="email-field input-field-container">
-								<span class="error-message">This field cannot be empty</span>
+								<span class="error-message"></span>
 
 								<i class="input-field-icon fas fa-envelope"></i>
 								<input
@@ -110,7 +110,7 @@
 
 									<i class="input-field-icon fas fa-phone"></i>
 									<input
-										type="tel"
+										type="number"
 										id="phone"
 										name="phone"
 										placeholder="Phone Number"
@@ -119,7 +119,7 @@
 									/>
 								</div>
 								<div class="password-field input-field-container">
-									<span class="error-message">This field cannot be empty</span>
+									<span class="error-message"></span>
 
 									<i class="fa-solid fa-key input-field-icon"></i>
 									<div class="toggle-password-view">
@@ -132,8 +132,7 @@
 										placeholder="Password"
 										required
 										class="input-field"
-										maxlength="50"
-										minlength="12"
+										autocomplete="new-password"
 									/>
 								</div>
 							</div>

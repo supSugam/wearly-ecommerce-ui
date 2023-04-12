@@ -412,7 +412,7 @@ Section Products !!!
 }
 
 .product_card--content {
-	padding: 1.8rem 1.2rem 3.2rem 1.8rem;
+	padding: 1.8rem 1.2rem 0rem 1.8rem;
 	display: flex;
 	gap: 1rem;
 	flex-direction: column;
@@ -498,7 +498,7 @@ Section Products !!!
 	color: #fff;
 	font-weight: 600;
 	position: absolute;
-	top: 26rem;
+	top: 22rem;
 	left: 20rem;
 	line-height: 1;
 	transform: rotate(-12deg);
@@ -507,45 +507,12 @@ Section Products !!!
 	justify-content: center;
 }
 
-/*  Color Boxes */
 
 .attribute-boxes {
 	display: flex;
 	gap: 1rem;
 }
 
-.size-container {
-	width: 14rem;
-	height: 100%;
-	margin-left: 1.9rem;
-	display: flex;
-	align-self: flex-end;
-	justify-content: space-between;
-	align-items: center;
-	cursor: pointer;
-	box-shadow: -1rem -1rem 1.5rem rgba(255, 255, 255, 0.551),
-		1rem 1rem 1.5rem rgba(70, 70, 70, 0.12);
-}
-
-.size-container label {
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	padding: 0.2rem 0.5rem;
-	font-weight: 500;
-	border-radius: 1rem;
-}
-
-.size-container input[type="radio"] {
-	display: none;
-}
-
-.size-container input[type="radio"]:checked + label {
-	font-size: 1.6rem;
-	font-weight: 600;
-	box-shadow: inset -1rem -1rem 1.5rem rgba(255, 255, 255, 0),
-		inset 1rem 1rem 1.5rem rgba(70, 70, 70, 0.12);
-	transition: all 0.4s;
-}
 
 .product-attributes:nth-child(3) li:nth-child(3) .attribute-boxes {
 	margin-left: 1.2rem;
