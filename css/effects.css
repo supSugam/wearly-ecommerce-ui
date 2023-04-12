@@ -87,3 +87,85 @@
 .product_card:active {
 	--clip: var(--splatted);
 }
+
+.underline-effect {
+	background: linear-gradient(currentColor 0 0) var(--d, 201%) 100% /200% 2px no-repeat;
+	transition: 0.5s;
+}
+.underline-effect:hover {
+	--d: -101%;
+}
+
+/* 
+Navigation Bar Dropdown
+*/
+
+.header__nav-item {
+	position: relative;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	z-index: 1;
+	display: none;
+	margin: 0;
+	list-style: none;
+	cursor: pointer;
+}
+
+.dropdown-item {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	padding: 6px 1.6rem;
+}
+
+.dropdown-item:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown-item {
+	display: block;
+	opacity: 0;
+}
+
+.header__nav-item:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu .dropdown_item-1 {
+	transform-origin: top center;
+	animation: slideDown 300ms 60ms ease-in-out forwards;
+}
+
+.dropdown-menu .dropdown_item-2 {
+	transform-origin: top center;
+	animation: slideDown 300ms 120ms ease-in-out forwards;
+}
+
+.dropdown-menu .dropdown_item-3 {
+	transform-origin: top center;
+	animation: slideDown 300ms 180ms ease-in-out forwards;
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* .dropdown-menu .dropdown_item-4 {
+  transform-origin: top center;
+  animation: slideDown 300ms 240ms ease-in-out forwards;
+}
+.dropdown-menu .dropdown_item-5 {
+  transform-origin: top center;
+  animation: slideDown 300ms 300ms ease-in-out forwards;
+} */
