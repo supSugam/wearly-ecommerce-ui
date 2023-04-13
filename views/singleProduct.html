@@ -25,6 +25,7 @@
 		<link rel="stylesheet" href="../css/effects.css" />
 		<link rel="stylesheet" href="../css/searchPage.css" />
 		<link rel="stylesheet" href="../css/addProduct.css" />
+		<link rel="stylesheet" href="../css/singleProduct.css" />
 
 		<!-- <script defer src="../js/view/effects.js"></script> -->
 		<!-- <script defer src="../js/view/formView.js"></script> -->
@@ -134,7 +135,103 @@
 		</header>
 
 		<main class="container">
-			<section class="product-container"></section>
+			<section class="product-container">
+				<div class="product-image-half">
+					<img
+						src="../img/product-img/hoodie-sample.jpeg"
+						alt="hoodie"
+						class="single-product-image"
+					/>
+				</div>
+				<div class="product-content-half grey-gradient">
+					<li class="product-tags">
+						<span class="tag-content product-type">Hoodie</span>
+						<span class="tag-content product-type">Men</span>
+					</li>
+					<div class="product-attribute">
+						<i class="ph-fill ph-seal-check"></i>
+						<span class="product-brand">Nike</span>
+					</div>
+					<h1 class="product-title__single">Zipless Grey Hoodie</h1>
+					<li class="product-attribute">
+						<p>Ratings</p>
+						<div class="attribute-boxes product-rating"></div>
+						(3.5)
+					</li>
+					<p class="product-price__single">Rs. 3790</p>
+
+					<div class="product-size__single">
+						<p>Available Sizes</p>
+						<div class="product-size__inputs">
+							<label class="size-option">
+								<input
+									type="radio"
+									name="radio"
+									value="medium"
+									class="product-size-radio"
+									checked="checked"
+								/>
+								<span class="size-label">Medium</span>
+							</label>
+
+							<label class="size-option">
+								<input
+									type="radio"
+									name="radio"
+									value="large"
+									class="product-size-radio"
+								/>
+								<span class="size-label">Large</span>
+							</label>
+
+							<label class="size-option">
+								<input
+									type="radio"
+									name="radio"
+									value="xl"
+									class="product-size-radio"
+								/>
+								<span class="size-label">Extra Large</span>
+							</label>
+						</div>
+					</div>
+					<p class="quantity-text">
+						Quantity <span class="stock-quantity">(17 Left in Stock.)</span>
+					</p>
+					<div class="add-to-cart__single">
+						<div class="quantity-input">
+							<button class="quantity-btn minus">-</button>
+							<input
+								class="quantity-value"
+								type="number"
+								value="1"
+								min="1"
+								max="10"
+								readonly
+							/>
+							<button class="quantity-btn plus">+</button>
+						</div>
+
+						<button class="btn btn--cart">
+							Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+						</button>
+					</div>
+
+					<div class="product-description__single">
+						<p class="desc-title">Product Description</p>
+
+						<p>
+							• Versatile grey color
+							<br />
+							• Zipless design for a minimalistic look
+							<br />
+							• 100% cotton
+							<br />
+							• Machine washable
+						</p>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
