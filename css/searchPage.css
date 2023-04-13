@@ -164,7 +164,12 @@ Sort Button
 	background-color: #f2f2f2;
 }
 
-.dropdown-menu {
+.header__search-box {
+	position: relative;
+}
+
+.dropdown-menu-sortby,
+.dropdown-menu-searchsuggestions {
 	position: absolute;
 	width: 16rem;
 	top: calc(100% + 4px);
@@ -183,7 +188,20 @@ Sort Button
 	transition: all 0.3s ease;
 }
 
-.dropdown-menu.open {
+.dropdown-menu-searchsuggestions p {
+	font-weight: 600;
+	font-size: 1.8rem;
+	padding: 1rem;
+}
+
+.header__search-box .dropdown-menu-searchsuggestions {
+	width: 27rem;
+	top: calc(100% + 12px);
+	left: 0%;
+}
+
+.dropdown-menu-sortby.open,
+.dropdown-menu-searchsuggestions.open {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);

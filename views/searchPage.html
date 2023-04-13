@@ -52,18 +52,33 @@
 
 			<nav class="header__nav">
 				<ul class="header__nav-list">
-					<li class="header__nav-item">
+					<li class="header__nav-item underline-effect">
 						<a href="#" class="header__nav-link">Home</a>
 					</li>
-					<li class="header__nav-item">
-						<a href="#" class="header__nav-link">Shop</a>
-						<i class="fa-solid fa-caret-down"></i>
+					<li class="header__nav-item underline-effect">
+						<a href="#" class="header__nav-link"
+							>Shop <i class="fa-solid fa-caret-down"></i
+						></a>
+
+						<ul class="dropdown-menu-navbar">
+							<li class="dropdown-item dropdown_item-1">Latest</li>
+							<li class="dropdown-item dropdown_item-2">Trending</li>
+							<li class="dropdown-item dropdown_item-3">Mega Sale</li>
+						</ul>
 					</li>
-					<li class="header__nav-item">
-						<a href="#" class="header__nav-link">Category</a>
-						<i class="fa-solid fa-caret-down"></i>
+					<li class="header__nav-item underline-effect">
+						<a href="#" class="header__nav-link"
+							>Category<i class="fa-solid fa-caret-down"></i
+						></a>
+						<ul class="dropdown-menu-navbar">
+							<li class="dropdown-item dropdown_item-1">Mens</li>
+							<li class="dropdown-item dropdown_item-2">Womens</li>
+							<li class="dropdown-item dropdown_item-3">Unisex</li>
+							<li class="dropdown-item dropdown_item-3">Formals</li>
+							<li class="dropdown-item dropdown_item-3">Casuals</li>
+						</ul>
 					</li>
-					<li class="header__nav-item">
+					<li class="header__nav-item underline-effect">
 						<a href="#" class="header__nav-link">Popular</a>
 						<i class="fa-solid fa-caret-down"></i>
 					</li>
@@ -73,7 +88,13 @@
 			<div class="user__controls">
 				<div class="header__search-box">
 					<form action="" class="search__form">
-						<i class="fa-solid fa-magnifying-glass form-icon gradient-text"></i>
+						<i
+							class="fa-solid fa-magnifying-glass form-icon gradient-text active"
+						></i>
+						<i
+							class="fa-solid fa-spinner-third form-icon gradient-text fa-spin"
+						></i>
+						<i class="fa-solid fa-x form-icon gradient-text"></i>
 
 						<input
 							class="search__form--input"
@@ -81,15 +102,22 @@
 							type="search"
 							placeholder="Search here.."
 							required=""
+							autocomplete="off"
 						/>
 					</form>
+					<ul class="dropdown-menu-searchsuggestions">
+						<p>Popular Right Now</p>
+						<li class="dropdown-option" data-value="hoodie">
+							<i class="fa-light fa-magnifying-glass"></i>Hoodie
+						</li>
+						<li class="dropdown-option" data-value="tshirt">
+							<i class="fa-light fa-magnifying-glass"></i>Tshirt
+						</li>
+						<li class="dropdown-option" data-value="formals">
+							<i class="fa-light fa-magnifying-glass"></i>Formals
+						</li>
+					</ul>
 				</div>
-
-				<!-- 
-
-			When the user is logged in, the login button will be replaced with the user icon and the cart icon.
-
-			-->
 
 				<div class="header__icons">
 					<!-- <a href="#" class="header__nav-link">
@@ -166,7 +194,7 @@
 								<span class="selected-option">Relevance</span>
 								<i class="fa-solid fa-caret-down"></i>
 							</button>
-							<ul class="dropdown-menu">
+							<ul class="dropdown-menu-sortby">
 								<li class="dropdown-option selected" data-value="Relevance">
 									<i class="fa-solid fa-bullseye-arrow"></i>Relevance
 								</li>

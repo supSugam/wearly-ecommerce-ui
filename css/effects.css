@@ -104,50 +104,52 @@ Navigation Bar Dropdown
 	position: relative;
 }
 
-.dropdown-menu {
+.dropdown-menu-navbar {
 	position: absolute;
 	top: 3rem;
 	left: 0;
-	z-index: 1;
+	z-index: 5;
 	display: none;
 	margin: 0;
 	list-style: none;
 	cursor: pointer;
+	padding-top: 2rem;
 }
 
 .dropdown-item {
+	display: block;
+	opacity: 0;
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
-	padding: 6px 1.6rem;
+	padding: 6px 3rem 6px 1rem;
 }
 
 .dropdown-item:hover {
 	background-color: #f1f1f1;
 }
 
-.dropdown-item {
-	display: block;
-	opacity: 0;
-}
-
-.header__nav-item:hover .dropdown-menu {
+.header__nav-item:hover .dropdown-menu-navbar {
 	display: block;
 }
 
-.dropdown-menu .dropdown_item-1 {
+.dropdown-menu-navbar .dropdown_item-1 {
 	transform-origin: top center;
-	animation: slideDown 300ms 60ms ease-in-out forwards;
+	animation: slideDown 400ms 80ms ease-in-out forwards;
 }
 
-.dropdown-menu .dropdown_item-2 {
+.dropdown-menu-navbar .dropdown_item-2 {
 	transform-origin: top center;
-	animation: slideDown 300ms 120ms ease-in-out forwards;
+	animation: slideDown 400ms 160ms ease-in-out forwards;
 }
 
-.dropdown-menu .dropdown_item-3 {
+.dropdown-menu-navbar .dropdown_item-3 {
 	transform-origin: top center;
-	animation: slideDown 300ms 180ms ease-in-out forwards;
+	animation: slideDown 400ms 240ms ease-in-out forwards;
+}
+
+.header__nav-item:hover body {
+	filter: brightness(0.8);
 }
 
 @keyframes slideDown {

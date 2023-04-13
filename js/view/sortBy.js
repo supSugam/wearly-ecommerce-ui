@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const dropdownWrapper = document.querySelector(".dropdown-wrapper");
 	if (!dropdownWrapper) return;
 	const dropdownBtn = dropdownWrapper.querySelector(".dropdown-btn");
-	const dropdownMenu = dropdownWrapper.querySelector(".dropdown-menu");
+	const dropdownMenu = dropdownWrapper.querySelector(".dropdown-menu-sortby");
 	const dropdownOptions = dropdownMenu.querySelectorAll(".dropdown-option");
 
 	// Set default selected option
