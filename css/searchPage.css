@@ -201,7 +201,8 @@ Sort Button
 }
 
 .dropdown-menu-sortby.open,
-.dropdown-menu-searchsuggestions.open {
+.dropdown-menu-searchsuggestions.open,
+.dropdown-menu-profile.open {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);

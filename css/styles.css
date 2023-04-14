@@ -44,8 +44,10 @@ Section Header / Navigation Bar !!!
 
 .header__nav-link:link,
 .header__nav-link:visited {
-	display: inline-block;
-	gap: 1.2rem;
+	display: flex;
+
+	gap: 6px;
+	align-items: center;
 	font-weight: 500;
 	color: #374151;
 	text-decoration: none;
@@ -58,11 +60,11 @@ Section Header / Navigation Bar !!!
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 1.8rem;
+	gap: 3.2rem;
 }
 
 .header__nav-link i {
-	font-size: 1.8rem;
+	font-size: 2rem;
 }
 
 /* Search Field */
@@ -71,6 +73,7 @@ Section Header / Navigation Bar !!!
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	min-width: 30rem;
 }
 
 .search__form {
@@ -89,7 +92,7 @@ Section Header / Navigation Bar !!!
 }
 
 .search__form--input {
-	width: 100%;
+	width: 32rem;
 	padding: 1.2rem 1.8rem;
 	font-size: 1.7rem;
 	font-family: inherit;
@@ -129,6 +132,34 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .btn-primary:hover {
 	background: #2c4eb2;
+}
+
+.dropdown-menu-profile {
+	position: absolute;
+	width: 23rem;
+	top: calc(100% + 4px);
+	left: 82%;
+	z-index: 50;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-1rem);
+	transition: all 0.3s ease;
+}
+
+.dropdown-option a {
+	display: block;
+	color: #374151;
+	font-size: 1.8rem;
+	font-weight: 500;
+	text-decoration: none;
+	transition: all 0.3s;
 }
 
 /*

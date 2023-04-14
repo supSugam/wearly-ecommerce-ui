@@ -38,6 +38,7 @@
 
 		<script defer src="../js/controller/loader.js"></script>
 		<script defer src="../js/view/categoryDropdown.js"></script>
+		<script defer src="../js/view/profileDropdown.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -79,8 +80,9 @@
 						</ul>
 					</li>
 					<li class="header__nav-item underline-effect">
-						<a href="#" class="header__nav-link">Popular</a>
-						<i class="fa-solid fa-caret-down"></i>
+						<a href="#" class="header__nav-link"
+							>Popular<i class="fa-solid fa-caret-down"></i
+						></a>
 					</li>
 				</ul>
 			</nav>
@@ -129,6 +131,23 @@
 					<a href="#" class="header__nav-link">
 						<i class="fa-solid fa-user"></i>
 					</a>
+					<ul class="dropdown-menu-profile">
+						<li class="dropdown-option">
+							<a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+						</li>
+
+						<li class="dropdown-option">
+							<a href="cartPage.html"
+								><i class="fa-solid fa-bags-shopping"></i> Your Orders</a
+							>
+						</li>
+						<li class="dropdown-option">
+							<a><i class="fa-solid fa-key"></i> Reset Password</a>
+						</li>
+						<li class="dropdown-option">
+							<a><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+						</li>
+					</ul>
 					<!-- <button class="btn btn-primary margin-left">Login</button> -->
 				</div>
 			</div>
