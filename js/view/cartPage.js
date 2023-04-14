@@ -41,6 +41,9 @@ const cartPriceHandler = function (quantityInput, totalPrice, price) {
 	);
 	document.querySelector(".cart-item__totalPrice--value").textContent =
 		grandTotalPrice;
+
+	document.querySelector(".grand-total__price-value").textContent =
+		grandTotalPrice + 135;
 };
 
 // const cartItemsPerPage = 3;

@@ -61,6 +61,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
+	height: 100%;
 }
 
 .cart-heading__container,
@@ -185,6 +186,7 @@ span.cart-item__totalPrice--value {
 .order-info__form {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 }
 .payment-method__form label {
 	display: flex;
@@ -240,4 +242,32 @@ span.cart-item__totalPrice--value {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
+}
+
+.order-placement {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: auto;
+	gap: 2rem;
+}
+
+.price-details__final {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+	width: 100%;
+	padding: 2.4rem 0;
+	border-top: 1px solid #d1d5db;
+	border-bottom: 1px solid #d1d5db;
+}
+
+.shipping-fee,
+.grand-total__price {
+	display: flex;
+	justify-content: space-between;
+}
+
+.grand-total__price-value {
+	font-weight: 600;
 }
