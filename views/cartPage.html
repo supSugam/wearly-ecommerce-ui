@@ -26,17 +26,18 @@
 		<link rel="stylesheet" href="../css/searchPage.css" />
 		<link rel="stylesheet" href="../css/login.css" />
 		<link rel="stylesheet" href="../css/cartPage.css" />
+		<link rel="stylesheet" href="../css/singleProduct.css" />
 
 		<script defer src="../js/view/effects.js"></script>
 		<script defer src="../js/view/formView.js"></script>
 		<script defer src="../js/view/imageView.js"></script>
 		<script defer src="../js/view/passwordToggler.js"></script>
-		<script defer src="../js/view/product-card-view.js"></script>
+		<!-- <script defer src="../js/view/product-card-view.js"></script> -->
 		<script defer src="../js/controller/formControllers.js"></script>
 		<script defer src="../js/view/sortBy.js"></script>
 		<script defer src="../js/view/filterOptions.js"></script>
 		<script defer src="../js/view/priceRange.js"></script>
-
+		<script defer src="../js/view/cartPage.js"></script>
 		<script defer src="../js/controller/loader.js"></script>
 		<script defer src="../js/view/categoryDropdown.js"></script>
 	</head>
@@ -150,9 +151,327 @@
 							<h2 class="cart-attribute__heading">Price</h2>
 							<h2 class="cart-attribute__heading">Total</h2>
 						</div>
+						<div class="cart-items__container">
+							<div class="cart-item">
+								<div class="cart-item__details">
+									<img
+										src="../img/product-img/hoodie-sample.jpeg"
+										alt="hoodie"
+										class="cart-item__img"
+									/>
+									<div class="cart-item__details--text">
+										<h3 class="cart-item__title">Grey Zipless Hoodie</h3>
+										<div class="product-attribute">
+											<i class="ph-fill ph-seal-check"></i>
+											<span class="product-brand">Nike</span>
+										</div>
+										<div class="product-size__inputs">
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="xl"
+													class="product-size-radio"
+												/>
+												<span class="size-label">S</span>
+											</label>
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="medium"
+													class="product-size-radio"
+													checked="checked"
+												/>
+												<span class="size-label">M</span>
+											</label>
+
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="large"
+													class="product-size-radio"
+												/>
+												<span class="size-label">L</span>
+											</label>
+
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="xl"
+													class="product-size-radio"
+												/>
+												<span class="size-label">XL</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="cart-item__quantity">
+									<div class="quantity-input">
+										<button class="quantity-btn minus">-</button>
+										<input
+											class="quantity-value"
+											type="number"
+											value="1"
+											min="1"
+											max="10"
+											readonly
+										/>
+										<button class="quantity-btn plus">+</button>
+									</div>
+									<span class="stock-quantity">(17 Left in Stock.)</span>
+								</div>
+
+								<div class="cart-item__price">
+									<p class="cart-item__price--text">Rs.</p>
+									<span class="cart-item__price--value">15</span>
+								</div>
+								<div class="cart-item__total-price">
+									<p class="cart-item__price--text">Rs.</p>
+									<span class="cart-item__total-price--value">4500</span>
+								</div>
+							</div>
+							<div class="cart-item">
+								<div class="cart-item__details">
+									<img
+										src="../img/product-img/hoodie-sample.jpeg"
+										alt="hoodie"
+										class="cart-item__img"
+									/>
+									<div class="cart-item__details--text">
+										<h3 class="cart-item__title">Grey Zipless Hoodie</h3>
+										<div class="product-attribute">
+											<i class="ph-fill ph-seal-check"></i>
+											<span class="product-brand">Nike</span>
+										</div>
+										<div class="product-size__inputs">
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="xl"
+													class="product-size-radio"
+												/>
+												<span class="size-label">S</span>
+											</label>
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="medium"
+													class="product-size-radio"
+													checked="checked"
+												/>
+												<span class="size-label">M</span>
+											</label>
+
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="large"
+													class="product-size-radio"
+												/>
+												<span class="size-label">L</span>
+											</label>
+
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="xl"
+													class="product-size-radio"
+												/>
+												<span class="size-label">XL</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="cart-item__quantity">
+									<div class="quantity-input">
+										<button class="quantity-btn minus">-</button>
+										<input
+											class="quantity-value"
+											type="number"
+											value="1"
+											min="1"
+											max="10"
+											readonly
+										/>
+										<button class="quantity-btn plus">+</button>
+									</div>
+									<span class="stock-quantity">(17 Left in Stock.)</span>
+								</div>
+
+								<div class="cart-item__price">
+									<p class="cart-item__price--text">Rs.</p>
+									<span class="cart-item__price--value">15</span>
+								</div>
+								<div class="cart-item__total-price">
+									<p class="cart-item__price--text">Rs.</p>
+									<span class="cart-item__total-price--value">4500</span>
+								</div>
+							</div>
+							<div class="cart-item">
+								<div class="cart-item__details">
+									<img
+										src="../img/product-img/hoodie-sample.jpeg"
+										alt="hoodie"
+										class="cart-item__img"
+									/>
+									<div class="cart-item__details--text">
+										<h3 class="cart-item__title">Grey Zipless Hoodie</h3>
+										<div class="product-attribute">
+											<i class="ph-fill ph-seal-check"></i>
+											<span class="product-brand">Nike</span>
+										</div>
+										<div class="product-size__inputs">
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="xl"
+													class="product-size-radio"
+												/>
+												<span class="size-label">S</span>
+											</label>
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="medium"
+													class="product-size-radio"
+													checked="checked"
+												/>
+												<span class="size-label">M</span>
+											</label>
+
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="large"
+													class="product-size-radio"
+												/>
+												<span class="size-label">L</span>
+											</label>
+
+											<label class="size-option">
+												<input
+													type="radio"
+													name="radio"
+													value="xl"
+													class="product-size-radio"
+												/>
+												<span class="size-label">XL</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="cart-item__quantity">
+									<div class="quantity-input">
+										<button class="quantity-btn minus">-</button>
+										<input
+											class="quantity-value"
+											type="number"
+											value="1"
+											min="1"
+											max="10"
+											readonly
+										/>
+										<button class="quantity-btn plus">+</button>
+									</div>
+									<span class="stock-quantity">(17 Left in Stock.)</span>
+								</div>
+
+								<div class="cart-item__price">
+									<p class="cart-item__price--text">Rs.</p>
+									<span class="cart-item__price--value">15</span>
+								</div>
+								<div class="cart-item__total-price">
+									<p class="cart-item__price--text">Rs.</p>
+									<span class="cart-item__total-price--value">4500</span>
+								</div>
+							</div>
+
+							<div class="cart-navigations">
+								<div class="pagination-cart-items">
+									<button class="btn--inline pagination__btn--prev">
+										<i class="fa-solid fa-arrow-left"></i>
+										<span>Page 1</span>
+									</button>
+									<button class="btn--inline pagination__btn--next">
+										<span>Page 3</span>
+										<i class="fa-solid fa-arrow-right"></i>
+									</button>
+								</div>
+								<div class="cart-price__grandTotal">
+									<p>Total Cost</p>
+									<p>
+										Rs. <span class="cart-item__totalPrice--value">1500</span>
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="cart-summary"></div>
+				<div class="order-summary">
+					<h1 class="order-summary__heading">Order Summary</h1>
+
+					<div class="order-summary__content">
+						<div class="summary-heading__container">
+							<h1 class="cart-attribute__heading">Delivery Information</h1>
+						</div>
+						<form action="" class="order-info__form">
+							<div class="product-name-field input-field-container">
+								<span class="error-message">This field cannot be empty</span>
+								<i class="fa-solid fa-location-dot input-field-icon"></i>
+
+								<input
+									type="text"
+									id="shipping-address"
+									name="shipping-address"
+									placeholder="Shipping Address"
+									required
+									class="input-field"
+									minlength="20"
+								/>
+							</div>
+							<div class="phone-field input-field-container">
+								<span class="error-message">This field cannot be empty</span>
+
+								<i class="input-field-icon fas fa-phone"></i>
+								<input
+									type="number"
+									id="phone"
+									name="phone"
+									placeholder="Phone Number"
+									required
+									class="input-field"
+									minlength="10"
+									maxlength="10"
+								/>
+							</div>
+							<div class="payment-method__form">
+								<label>
+									<input
+										type="radio"
+										name="radio-payment"
+										value="cod"
+										checked=""
+									/>
+									<span>Cash On Delivery</span>
+								</label>
+								<label>
+									<input type="radio" name="radio-payment" value="fonepay" />
+									<span>fonePay</span>
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
 			</section>
 		</main>
 
