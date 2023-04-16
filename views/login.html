@@ -22,7 +22,7 @@
 		<link rel="stylesheet" href="../css/styles.css" />
 		<link rel="stylesheet" href="../css/general.css" />
 		<link rel="stylesheet" href="../css/effects.css" />
-		<link rel="stylesheet" href="../css/login.css" />
+		<link rel="stylesheet" href="../css/loginSignup.css" />
 
 		<!-- JavaScript -->
 		<script defer src="../js/view/effects.js"></script>
@@ -60,13 +60,13 @@
 					</div>
 					<form
 						class="login-form"
-						action=""
+						action="LoginServlet"
 						method="post"
 						onsubmit="return validateLoginForm()"
 						novalidate
 					>
 						<div class="email-field input-field-container">
-							<span class="error-message">This field cannot be empty</span>
+							<span class="error-message"></span>
 							<i class="fa-solid fa-envelope input-field-icon login-email"></i>
 							<input
 								type="email"
@@ -78,7 +78,7 @@
 						</div>
 
 						<div class="password-field input-field-container">
-							<span class="error-message">This field cannot be empty</span>
+							<span class="error-message"></span>
 							<i class="fa-solid fa-key input-field-icon login-pass"></i>
 							<input
 								type="password"

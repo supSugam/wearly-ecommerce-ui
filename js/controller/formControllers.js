@@ -128,20 +128,12 @@ const validateLoginForm = function () {
 
 	inputFields.forEach((inputField) => {
 		inputField.addEventListener("input", () => {
-			inputField.classList.remove("error");
-			inputField
-				.closest(".input-field-container")
-				.querySelector(".error-message")
-				.classList.remove("show");
+			removeError(inputField);
 		});
 
 		if (!inputField.value) {
 			isValid = false;
-			inputField.classList.add("error");
-			inputField
-				.closest(".input-field-container")
-				.querySelector(".error-message")
-				.classList.add("show");
+			showError(inputField, `${inputField.placeholder} is required.`);
 		}
 	});
 

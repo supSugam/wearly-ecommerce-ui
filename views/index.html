@@ -23,13 +23,14 @@
 		<link rel="stylesheet" href="../css/general.css" />
 		<link rel="stylesheet" href="../css/styles.css" />
 		<link rel="stylesheet" href="../css/effects.css" />
+		<link rel="stylesheet" href="../css/loginSignup.css" />
+		<link rel="stylesheet" href="../css/searchPage.css" />
 
 		<script defer src="../js/view/effects.js"></script>
 		<script defer src="../js/view/formView.js"></script>
-		<script defer src="../js/view/imageView.js"></script>
-		<script defer src="../js/view/passwordToggler.js"></script>
+		<script defer src="../js/view/profileDropdown.js"></script>
 		<script defer src="../js/view/product-card-view.js"></script>
-		<!-- <script defer src="../js/controller/formControllers.js"></script> -->
+		<script defer src="../js/controller/formControllers.js"></script>
 		<script defer src="../js/controller/loader.js"></script>
 	</head>
 	<body>
@@ -72,8 +73,9 @@
 						</ul>
 					</li>
 					<li class="header__nav-item underline-effect">
-						<a href="#" class="header__nav-link">Popular</a>
-						<i class="fa-solid fa-caret-down"></i>
+						<a href="#" class="header__nav-link"
+							>Popular<i class="fa-solid fa-caret-down"></i
+						></a>
 					</li>
 				</ul>
 			</nav>
@@ -84,6 +86,10 @@
 						<i
 							class="fa-solid fa-magnifying-glass form-icon gradient-text active"
 						></i>
+						<i
+							class="fa-solid fa-spinner-third form-icon gradient-text fa-spin"
+						></i>
+						<i class="fa-solid fa-x form-icon gradient-text"></i>
 
 						<input
 							class="search__form--input"
@@ -91,21 +97,51 @@
 							type="search"
 							placeholder="Search here.."
 							required=""
+							autocomplete="off"
 						/>
 					</form>
+					<ul class="dropdown-menu-searchsuggestions">
+						<p><i class="fa-solid fa-fire"></i> Popular Right Now</p>
+						<li class="dropdown-option" data-value="hoodie">
+							<i class="fa-light fa-magnifying-glass"></i>Hoodie
+						</li>
+						<li class="dropdown-option" data-value="tshirt">
+							<i class="fa-light fa-magnifying-glass"></i>Tshirt
+						</li>
+						<li class="dropdown-option" data-value="formals">
+							<i class="fa-light fa-magnifying-glass"></i>Formals
+						</li>
+					</ul>
 				</div>
 
 				<div class="header__icons">
-					<!-- <a href="#" class="header__nav-link">
-					<i class="fa-solid fa-heart"></i>
-				</a>
-				<a href="#" class="header__nav-link">
-					<i class="fa-solid fa-shopping-cart"></i>
-				</a>
-				<a href="#" class="header__nav-link">
-					<i class="fa-solid fa-user"></i>
-				</a>  -->
-					<button class="btn btn-primary margin-left">Login</button>
+					<a href="#" class="header__nav-link">
+						<i class="fa-solid fa-heart"></i>
+					</a>
+					<a href="#" class="header__nav-link">
+						<i class="fa-solid fa-shopping-cart"></i>
+					</a>
+					<a href="#" class="header__nav-link">
+						<i class="fa-solid fa-user"></i>
+					</a>
+					<ul class="dropdown-menu-profile">
+						<li class="dropdown-option">
+							<a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+						</li>
+
+						<li class="dropdown-option">
+							<a href="cartPage.html"
+								><i class="fa-solid fa-bags-shopping"></i> Your Orders</a
+							>
+						</li>
+						<li class="dropdown-option">
+							<a><i class="fa-solid fa-key"></i> Reset Password</a>
+						</li>
+						<li class="dropdown-option">
+							<a><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+						</li>
+					</ul>
+					<!-- <button class="btn btn-primary margin-left">Login</button> -->
 				</div>
 			</div>
 		</header>
@@ -234,18 +270,21 @@
 
 				<div class="container product_cards--container">
 					<div class="product_card">
-						<div class="portrait-container">
-							<div class="portrait"></div>
-							<p class="price-currency">
-								Rs.
-								<span class="product-price">1,499</span>
-							</p>
+						<div class="product_card--image">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
 						</div>
-						<img
-							src="../img/product-img/skull-printed-tshirt.jpg"
-							class="product-img"
-							alt="skull-printed-tshirt"
-						/>
+
 						<div class="product_card--content">
 							<div class="product-attribute">
 								<i class="ph-fill ph-seal-check"></i>
@@ -264,29 +303,176 @@
 									<p>Ratings</p>
 									<div class="attribute-boxes product-rating"></div>
 								</li>
-
-								<!-- <li class="product-attribute">
-									Sizes
-									<div class="size-container">
-										<input  id="size-small" name="size" type="radio" value="Small" />
-										<label for="size-small">S</label>
-
-										<input  id="size-medium" name="size" type="radio" value="Medium" />
-										<label for="size-medium">M</label>
-
-			
-										<input  id="size-large" name="size" type="radio" value="Large" checked="checked" />
-										<label for="size-large">L</label>
-
-										<input  id="size-xl" name="size" type="radio" value="Extra Large" />
-										<label for="size-xl">XL</label>
-
-
-									</div>
-								</li> -->
 							</ul>
 
-							<p class="quantity-text">Quantity</p>
+							<div class="add-to-cart">
+								<div class="quantity-input">
+									<button class="quantity-btn minus">-</button>
+									<input
+										class="quantity-value"
+										type="number"
+										value="1"
+										min="1"
+										max="10"
+										readonly
+									/>
+									<button class="quantity-btn plus">+</button>
+								</div>
+
+								<button class="btn btn--cart">
+									Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product_card--image">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
+						</div>
+
+						<div class="product_card--content">
+							<div class="product-attribute">
+								<i class="ph-fill ph-seal-check"></i>
+								<span class="product-brand">Nike</span>
+							</div>
+
+							<p class="product-title">Skull Printed T-Shirt</p>
+
+							<ul class="product-attributes">
+								<li class="product-tags">
+									<span class="tag-content product-type">Tshirts</span>
+									<span class="tag-content product-type">Unisex</span>
+								</li>
+
+								<li class="product-attribute">
+									<p>Ratings</p>
+									<div class="attribute-boxes product-rating"></div>
+								</li>
+							</ul>
+
+							<div class="add-to-cart">
+								<div class="quantity-input">
+									<button class="quantity-btn minus">-</button>
+									<input
+										class="quantity-value"
+										type="number"
+										value="1"
+										min="1"
+										max="10"
+										readonly
+									/>
+									<button class="quantity-btn plus">+</button>
+								</div>
+
+								<button class="btn btn--cart">
+									Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product_card--image">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
+						</div>
+
+						<div class="product_card--content">
+							<div class="product-attribute">
+								<i class="ph-fill ph-seal-check"></i>
+								<span class="product-brand">Nike</span>
+							</div>
+
+							<p class="product-title">Skull Printed T-Shirt</p>
+
+							<ul class="product-attributes">
+								<li class="product-tags">
+									<span class="tag-content product-type">Tshirts</span>
+									<span class="tag-content product-type">Unisex</span>
+								</li>
+
+								<li class="product-attribute">
+									<p>Ratings</p>
+									<div class="attribute-boxes product-rating"></div>
+								</li>
+							</ul>
+
+							<div class="add-to-cart">
+								<div class="quantity-input">
+									<button class="quantity-btn minus">-</button>
+									<input
+										class="quantity-value"
+										type="number"
+										value="1"
+										min="1"
+										max="10"
+										readonly
+									/>
+									<button class="quantity-btn plus">+</button>
+								</div>
+
+								<button class="btn btn--cart">
+									Add to Cart <i class="ph-fill ph-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product_card--image">
+							<div class="portrait-container">
+								<div class="portrait"></div>
+								<p class="price-currency">
+									Rs.
+									<span class="product-price">1,499</span>
+								</p>
+							</div>
+							<img
+								src="../img/product-img/skull-printed-tshirt.jpg"
+								class="product-img"
+								alt="skull-printed-tshirt"
+							/>
+						</div>
+
+						<div class="product_card--content">
+							<div class="product-attribute">
+								<i class="ph-fill ph-seal-check"></i>
+								<span class="product-brand">Nike</span>
+							</div>
+
+							<p class="product-title">Skull Printed T-Shirt</p>
+
+							<ul class="product-attributes">
+								<li class="product-tags">
+									<span class="tag-content product-type">Tshirts</span>
+									<span class="tag-content product-type">Unisex</span>
+								</li>
+
+								<li class="product-attribute">
+									<p>Ratings</p>
+									<div class="attribute-boxes product-rating"></div>
+								</li>
+							</ul>
+
 							<div class="add-to-cart">
 								<div class="quantity-input">
 									<button class="quantity-btn minus">-</button>

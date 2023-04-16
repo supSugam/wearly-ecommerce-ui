@@ -195,7 +195,7 @@ Sort Button
 }
 
 .header__search-box .dropdown-menu-searchsuggestions {
-	width: 27rem;
+	width: 32rem;
 	top: calc(100% + 12px);
 	left: 0%;
 }
