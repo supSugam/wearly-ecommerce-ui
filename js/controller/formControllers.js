@@ -147,6 +147,7 @@ const validateLoginForm = function () {
 	// submit form if validation is successful
 	return true;
 };
+
 const validateAddProductForm = function () {
 	const addProductForm = document.querySelector(".add-product-form");
 	const inputFields = addProductForm.querySelectorAll(
@@ -176,20 +177,12 @@ const validateAddProductForm = function () {
 
 	inputFields.forEach((inputField) => {
 		inputField.addEventListener("input", () => {
-			inputField.classList.remove("error");
-			inputField
-				.closest(".input-field-container")
-				.querySelector(".error-message")
-				.classList.remove("show");
+			removeError(inputField);
 		});
 
 		if (!inputField.value) {
 			isValid = false;
-			inputField.classList.add("error");
-			inputField
-				.closest(".input-field-container")
-				.querySelector(".error-message")
-				.classList.add("show");
+			showError(inputField, `${inputField.placeholder} is required.`);
 		}
 	});
 
@@ -208,6 +201,7 @@ const validateAddProductForm = function () {
 	// submit form if validation is successful
 	return true;
 };
+
 document.addEventListener("DOMContentLoaded", () => {
 	const forms = document.querySelectorAll("form");
 	forms.forEach((form) => {
@@ -215,53 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			e.preventDefault();
 		});
 	});
-
-	// const checkBoxGender = document
-	// 	.querySelector(".add-product-form")
-	// 	.querySelector(".category-gender")
-	// 	.querySelectorAll("input[type=checkbox]");
-
-	// checkBoxGender.forEach((checkbox) => {
-	// 	checkbox.addEventListener("click", (event) => {
-	// 		// If the clicked checkbox is now checked
-	// 		if (event.target.checked) {
-	// 			// Uncheck the other checkboxes
-	// 			checkBoxGender.forEach((otherCheckbox) => {
-	// 				if (otherCheckbox !== event.target) {
-	// 					otherCheckbox.checked = false;
-	// 				}
-	// 			});
-	// 		}
-	// 	});
-	// });
-
-	// const checkBoxCategory = document
-	// 	.querySelector(".add-product-form")
-	// 	.querySelector(".category-category")
-	// 	.querySelectorAll("input[type=checkbox]");
-
-	// let checkedCategory = [];
-
-	// let lastCheckedCheckbox = null;
-
-	// checkBoxCategory.forEach((checkbox) => {
-	// 	checkbox.addEventListener("click", (e) => {
-	// 		if (e.target.checked) {
-	// 			if (lastCheckedCheckbox !== null && lastCheckedCheckbox !== e.target) {
-	// 				lastCheckedCheckbox.checked = false;
-	// 				checkedCategory = [e.target.value];
-	// 			} else {
-	// 				checkedCategory.push(e.target.value);
-	// 			}
-	// 			lastCheckedCheckbox = e.target;
-	// 		} else {
-	// 			checkedCategory = checkedCategory.filter(
-	// 				(value) => value !== e.target.value
-	// 			);
-	// 			lastCheckedCheckbox = null;
-	// 		}
-	// 	});
-	// });
 });
 
 // document
@@ -336,7 +283,7 @@ searchInput.addEventListener(
 					: "";
 			});
 			// Add the 'active' class to the spin icon and set a timeout of 2 seconds
-			icons[1].classList.add("active");
+			spinIcon.classList.add("active");
 			setTimeout(() => {
 				// Check if the input value has not changed during the timeout
 				if (inputValue === searchInput.value.trim()) {
@@ -344,7 +291,7 @@ searchInput.addEventListener(
 					xIcon.classList.add("active");
 					spinIcon.classList.remove("active");
 				}
-			}, 1000);
+			}, 200);
 		} else {
 			// Add the 'active' class to the x icon if the input is empty
 			searchIcon.classList.add("active");
