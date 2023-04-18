@@ -148,60 +148,6 @@ const validateLoginForm = function () {
 	return true;
 };
 
-const validateAddProductForm = function () {
-	const addProductForm = document.querySelector(".add-product-form");
-	const inputFields = addProductForm.querySelectorAll(
-		"input[type=text][required], input[type=number][required], textarea[required]"
-	);
-	const imageInput = addProductForm.querySelector("input[type=file][required]");
-
-	// const checkCheckBox = function () {
-	// 	if (!checkBoxInput.checked) {
-	// 		isValid = false;
-	// 		checkBoxText.classList.add("error-checkbox");
-	// 	} else {
-	// 		checkBoxText.classList.remove("error-checkbox");
-	// 	}
-	// };
-	// checkCheckBox();
-
-	// checkBoxInput.addEventListener("change", () => {
-	// 	checkCheckBox();
-	// });
-
-	// const checkBoxText = signupForm
-	// 	.querySelector(".label-checkmark")
-	// 	.querySelector("p");
-
-	let isValid = true;
-
-	inputFields.forEach((inputField) => {
-		inputField.addEventListener("input", () => {
-			removeError(inputField);
-		});
-
-		if (!inputField.value) {
-			isValid = false;
-			showError(inputField, `${inputField.placeholder} is required.`);
-		}
-	});
-
-	if (imageInput.files.length !== 1) {
-		isValid = false;
-		addProductForm
-			.querySelector(".product-preview")
-			.classList.add("error-image");
-	}
-
-	if (!isValid) return false;
-
-	document.querySelector(".btn-signup").innerHTML =
-		'Signing Up.. <i class="fa-duotone fa-spinner-third fa-spin"></i>';
-
-	// submit form if validation is successful
-	return true;
-};
-
 document.addEventListener("DOMContentLoaded", () => {
 	const forms = document.querySelectorAll("form");
 	forms.forEach((form) => {
@@ -211,16 +157,92 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-// document
-// 	.querySelector(".search__form--input")
-// 	.addEventListener("input", (e) => {
-// 		e.preventDefault();
-// 		const icons = document.querySelector(".search__form").querySelectorAll("i");
-// 		icons.forEach((icon) => {
-// 			if (icon.classList.contains("fa-spin")) icon.classList.add("active");
-// 			else icon.classList.remove("active");
-// 		});
-// 	});
+const validateAddProductForm = function () {
+	const addProductForm = document.querySelector(".add-product-form");
+
+	const inputFields = signupForm.querySelectorAll(
+		"input[type=text][required], input[type=number][required], input[type=password][required], input[type=number][required]"
+	);
+	const imageInput = signupForm.querySelector("input[type=file][required]");
+
+	const checkBoxInput = signupForm.querySelector('input[type="checkbox"]');
+	const checkBoxText = signupForm
+		.querySelector(".label-checkmark")
+		.querySelector("p");
+
+	let isValid = true;
+
+	const validateCheckBox = function () {
+		if (checkBoxInput.checked) {
+			isValid = true;
+			checkBoxText.classList.remove("error-checkbox", isValid);
+		} else {
+			isValid = false;
+			checkBoxText.classList.add("error-checkbox", isValid);
+		}
+	};
+	validateCheckBox();
+
+	checkBoxInput.addEventListener("change", validateCheckBox);
+
+	inputFields.forEach((inputField) => {
+		if (!inputField.value) {
+			isValid = false;
+			showError(inputField, `${inputField.placeholder} is required.`);
+		} else {
+			if (inputField.type === "email") {
+				const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+				if (!emailRegex.test(inputField.value)) {
+					isValid = false;
+					showError(inputField, "Enter a valid email address!");
+				}
+			}
+
+			if (inputField.type === "password") {
+				if (inputField.value.length < 8) {
+					isValid = false;
+					showError(inputField, "Must be at least 8 characters long!");
+				}
+			}
+
+			if (inputField.type === "number") {
+				if (inputField.value.length !== 10) {
+					isValid = false;
+					showError(inputField, "Must be 10 digits long!");
+				}
+			}
+		}
+
+		inputField.addEventListener("input", () => {
+			removeError(inputField);
+		});
+	});
+
+	if (imageInput.files.length !== 1) {
+		isValid = false;
+		document.querySelector(".avatar-preview").classList.add("error-image");
+	}
+
+	if (!isValid) return false;
+
+	document.querySelector(".btn-signup").innerHTML =
+		'Signing Up.. <i class="fa-duotone fa-spinner-third fa-spin"></i>';
+
+	// submit form if validation is successful
+	const formData = new FormData(signupForm);
+	// create an object to store the form data
+	const formObject = {};
+
+	// iterate over the form data entries and add them to the object
+	for (const [key, value] of formData.entries()) {
+		key === "check" ? (formObject[key] = true) : (formObject[key] = value);
+	}
+
+	// convert the object to JSON using JSON.stringify()
+	const jsonData = JSON.stringify(formObject);
+	console.log(jsonData);
+	return true;
+};
 
 // A debounce function that wraps around the input event handler
 const debounce = (fn, delay) => {

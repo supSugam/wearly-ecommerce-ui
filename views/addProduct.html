@@ -39,9 +39,10 @@
 		<script defer src="../js/view/adminPanel.js"></script>
 
 		<script defer src="../js/controller/loader.js"></script>
-		<script defer src="../js/view/categoryDropdown.js"></script>
+		<!-- <script defer src="../js/view/categoryDropdown.js"></script> -->
 		<script defer src="../js/view/numberIncrement.js"></script>
 		<script defer src="../js/view/productCheckBoxValidator.js"></script>
+		<script defer src="../js/view/textArea.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -334,7 +335,7 @@
 													<i class="fa-solid fa-tags"></i>
 													Gender
 												</div>
-												<i class="fa fa-caret-down"></i>
+												<!-- <i class="fa fa-caret-down"></i> -->
 											</div>
 											<ul class="category-options show">
 												<li class="category-option">
@@ -369,6 +370,7 @@
 														id="checkBox-unisex"
 														name="checkBox-unisex"
 														class="terms-checkbox"
+														checked="checked"
 														value="Unisex"
 													/>
 													<label class="label-checkmark" for="checkBox-unisex">
@@ -386,36 +388,33 @@
 													<i class="fa-solid fa-tags"></i>
 													Category
 												</div>
-												<i class="fa fa-caret-down"></i>
+												<!-- <i class="fa fa-caret-down"></i> -->
 											</div>
 											<ul class="category-options show">
 												<li class="category-option">
 													<input
 														type="checkbox"
-														id="checkBox-footwear"
-														name="checkBox-footwear"
+														id="checkBox-tops"
+														name="checkBox-tops"
 														class="terms-checkbox"
-														value=""
+														value="tops"
 													/>
-													<label
-														class="label-checkmark"
-														for="checkBox-footwear"
-													>
+													<label class="label-checkmark" for="checkBox-tops">
 														<span class="checkmark"></span>
-														<p>Footwear</p>
+														<p>Tops</p>
 													</label>
 												</li>
 												<li class="category-option">
 													<input
 														type="checkbox"
-														id="checkBox-hoodie"
-														name="checkBox-hoodie"
+														id="checkBox-pants"
+														name="checkBox-pants"
 														class="terms-checkbox"
-														value=""
+														value="pants"
 													/>
-													<label class="label-checkmark" for="checkBox-hoodie">
+													<label class="label-checkmark" for="checkBox-pants">
 														<span class="checkmark"></span>
-														<p>Hoodie</p>
+														<p>Pants</p>
 													</label>
 												</li>
 												<li class="category-option">
@@ -424,7 +423,7 @@
 														id="checkBox-formalwear"
 														name="checkBox-formalwear"
 														class="terms-checkbox"
-														value=""
+														value="formalwear"
 													/>
 													<label
 														class="label-checkmark"
@@ -440,7 +439,7 @@
 														id="checkBox-sportswear"
 														name="check"
 														class="terms-checkbox"
-														value=""
+														value="Sportswear"
 														required
 													/>
 													<label
@@ -454,14 +453,17 @@
 												<li class="category-option">
 													<input
 														type="checkbox"
-														id="checkBox-shirts"
-														name="checkBox-shirts"
+														id="checkBox-accessories"
+														name="checkBox-accessories"
 														class="terms-checkbox"
-														value=""
+														value="accessories"
 													/>
-													<label class="label-checkmark" for="checkBox-shirts">
+													<label
+														class="label-checkmark"
+														for="checkBox-accessories"
+													>
 														<span class="checkmark"></span>
-														<p>Shirts</p>
+														<p>Accessories</p>
 													</label>
 												</li>
 												<li class="category-option">
@@ -470,7 +472,7 @@
 														id="checkBox-traditional"
 														name="checkBox-traditional"
 														class="terms-checkbox"
-														value=""
+														value="traditional"
 													/>
 													<label
 														class="label-checkmark"
@@ -483,14 +485,33 @@
 												<li class="category-option">
 													<input
 														type="checkbox"
-														id="checkBox-summer"
-														name="checkBox-summer"
+														id="checkBox-streetwear"
+														name="checkBox-streetwear"
 														class="terms-checkbox"
-														value=""
+														value="streetwear"
 													/>
-													<label class="label-checkmark" for="checkBox-summer">
+													<label
+														class="label-checkmark"
+														for="checkBox-streetwear"
+													>
 														<span class="checkmark"></span>
-														<p>Summer Wear</p>
+														<p>Streetwear</p>
+													</label>
+												</li>
+												<li class="category-option">
+													<input
+														type="checkbox"
+														id="checkBox-sleepwear"
+														name="checkBox-sleepwear"
+														class="terms-checkbox"
+														value="sleepwear"
+													/>
+													<label
+														class="label-checkmark"
+														for="checkBox-sleepwear"
+													>
+														<span class="checkmark"></span>
+														<p>Sleepwear</p>
 													</label>
 												</li>
 												<li class="category-option">
@@ -499,11 +520,11 @@
 														id="checkBox-winter"
 														name="checkBox-winter"
 														class="terms-checkbox"
-														value=""
+														value="coats and jackets"
 													/>
 													<label class="label-checkmark" for="checkBox-winter">
 														<span class="checkmark"></span>
-														<p>Winer Wear</p>
+														<p>Coats and Jackets</p>
 													</label>
 												</li>
 												<li class="category-option">
@@ -512,7 +533,8 @@
 														id="checkBox-casual"
 														name="checkBox-casual"
 														class="terms-checkbox"
-														value=""
+														value="casual"
+														checked="checked"
 													/>
 													<label class="label-checkmark" for="checkBox-casual">
 														<span class="checkmark"></span>
@@ -530,12 +552,14 @@
 										>
 										<i class="fa-solid fa-pen-to-square input-field-icon"></i>
 										<textarea
+											type="text"
 											id="product-description"
 											name="product-description"
 											placeholder="Product Description (Max 500 Characters)"
 											required
 											class="input-field"
-											maxlength="500"
+											rows="8"
+											maxlength="400"
 										></textarea>
 									</div>
 									<div class="product-upload-container">

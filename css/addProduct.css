@@ -176,7 +176,7 @@ Table View
 
 .product-category-field {
 	width: 100%;
-	height: 81rem;
+	height: 87rem;
 	background: #fff;
 	border-radius: 0.6rem;
 	border: 1px solid #00000020;
@@ -194,6 +194,16 @@ Table View
 	font-size: 1.7rem;
 	color: #374151;
 	resize: none;
+
+	counter-reset: line;
+}
+
+.product-description-field textarea:before {
+	counter-increment: line;
+	content: counter(line) ". ";
+	display: inline-block;
+	width: 30px;
+	margin-right: 5px;
 }
 
 .product-description-field i.input-field-icon {
