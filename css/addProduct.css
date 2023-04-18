@@ -110,7 +110,7 @@ Table View
 
 .admin-tools-container {
 	width: 100%;
-	min-height: 120rem;
+	min-height: 124rem;
 	display: flex;
 	align-items: top;
 	justify-content: center;
@@ -168,7 +168,7 @@ Table View
 
 .product-info-container {
 	width: 100%;
-	min-height: 67rem;
+	height: 86.4rem;
 	display: flex;
 	gap: 5rem;
 	flex-direction: column;
@@ -189,21 +189,29 @@ Table View
 .product-description-field textarea {
 	width: 100%;
 	height: 100%;
-	padding: 2rem 2rem;
+	padding: 5rem 2rem 4rem 3rem;
 	border-radius: 0.6rem;
-	font-size: 1.7rem;
+	font-size: 2rem;
 	color: #374151;
 	resize: none;
-
+	line-height: 2;
 	counter-reset: line;
 }
 
-.product-description-field textarea:before {
-	counter-increment: line;
-	content: counter(line) ". ";
-	display: inline-block;
-	width: 30px;
-	margin-right: 5px;
+.product-description-field .bullet-points {
+	display: flex;
+	opacity: 0;
+	flex-direction: column;
+	position: absolute;
+	top: 15%;
+	left: 4%;
+	gap: 2.3rem;
+	font-size: 1.8rem;
+	transition: all 0.3s ease-in;
+}
+
+.product-description-field textarea:focus + .bullet-points {
+	opacity: 0.5;
 }
 
 .product-description-field i.input-field-icon {
@@ -298,9 +306,10 @@ Table View
 	justify-content: center;
 }
 
-.product-preview:has(div.default-product) {
+.product-preview:has(div.default-avatar) {
 	padding: 2rem;
 }
+
 .upload-title {
 	font-size: 2rem;
 	color: #374151;

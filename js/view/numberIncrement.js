@@ -15,6 +15,8 @@ ispinUp.addEventListener("click", () => {
 
 // Decrement the value and update the input field
 ispinDown.addEventListener("click", () => {
+	let value = parseInt(inputField.value);
+
 	if (value > 0) {
 		value -= 5;
 		inputField.value = value;
