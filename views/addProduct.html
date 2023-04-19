@@ -31,6 +31,8 @@
 		<script defer src="../js/controller/formControllers.js"></script>
 		<script defer src="../js/view/adminPanel.js"></script>
 
+		<script defer src="../js/view/popupModal.js"></script>
+
 		<script defer src="../js/view/productCheckBoxValidator.js"></script>
 		<script defer src="../js/view/textArea.js"></script>
 	</head>
@@ -147,6 +149,24 @@
 			</div>
 		</header>
 
+		<dialog class="modal-popup" id="add-product__success">
+			<div class="popup-box">
+				<div class="popup-content">
+					<img src="../img/addProduct-success.svg" class="popup-image" />
+
+					<div class="modal__text">
+						<h2>Success <i class="fa-sharp fa-solid fa-badge-check"></i></h2>
+						<p>
+							Your products are now securely stored in wearly's cloud wardrobe
+							😶‍🌫️
+						</p>
+					</div>
+					<button class="btn btn--modal" type="button">OK</button>
+				</div>
+			</div>
+		</dialog>
+		<div id="overlay"></div>
+
 		<main class="container section-admin">
 			<section class="admin-panel-container">
 				<div class="section-admin-panel">
@@ -154,9 +174,6 @@
 						<div class="admin-sidebar-header">
 							<i class="fa-solid fa-screwdriver-wrench admin-page-icons"></i>
 							<h1 class="admin-sidebar-header-text">Operations</h1>
-							<!-- <button class="btn btn-search-reset">
-								<i class="fa-solid fa-bars admin-page-icons"></i>
-							</button> -->
 						</div>
 					</div>
 
@@ -546,13 +563,11 @@
 											placeholder="Product Description"
 											required
 											class="input-field"
-											rows="8"
-											maxlength="400"
+											rows="6"
+											maxlength="200"
 										></textarea>
 
 										<div class="bullet-points">
-											<i class="fa-solid fa-hand-point-right"></i>
-											<i class="fa-solid fa-hand-point-right"></i>
 											<i class="fa-solid fa-hand-point-right"></i>
 											<i class="fa-solid fa-hand-point-right"></i>
 											<i class="fa-solid fa-hand-point-right"></i>

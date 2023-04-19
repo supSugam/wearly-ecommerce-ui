@@ -439,6 +439,7 @@ Section Products !!!
 	width: 100%;
 	height: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 .product_card {
@@ -506,7 +507,7 @@ Section Products !!!
 .product-img {
 	height: 100%;
 	width: 100%;
-	background-size: cover;
+	object-fit: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -557,8 +558,8 @@ Section Products !!!
 	color: #fff;
 	font-weight: 600;
 	position: absolute;
-	top: 25rem;
-	left: 71%;
+	top: -4rem;
+	left: 72%;
 	line-height: 1;
 	transform: rotate(-12deg);
 	display: flex;
