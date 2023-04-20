@@ -300,6 +300,17 @@ Section Products !!!
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.category-1:hover,
+.category-2:hover,
+.category-3:hover,
+.category-4:hover,
+.category-5:hover,
+.category-6:hover {
+	transform: scale(1.2);
+	font-size: 5rem;
 }
 
 .category span {

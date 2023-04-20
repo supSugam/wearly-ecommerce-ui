@@ -64,6 +64,12 @@ Table View
 	background-size: cover;
 }
 
+.table-body {
+	display: block;
+	overflow-y: scroll;
+	width: 100%;
+}
+
 .customers-table,
 .products-table {
 	border-spacing: 1;
@@ -82,12 +88,18 @@ Table View
 }
 
 .table-container thead tr {
+	width: 98%;
+	display: table;
+	table-layout: fixed;
 	height: 6rem;
 	color: #374151;
 }
 
 .table-container tbody tr {
-	height: 5rem;
+	width: 100%;
+	display: table;
+	table-layout: auto;
+	height: 12rem;
 	font-size: 1.6rem;
 	color: #374151;
 }
@@ -100,10 +112,39 @@ Table View
 	background-color: #ddd;
 }
 
-.table-container .scrollbar {
-	overflow-x: scroll;
-	overflow-y: hidden;
-	margin-top: 5px;
+.customers-table thead th:nth-child(1),
+.customers-table tbody td:nth-child(1) {
+	width: 20%;
+}
+
+.customers-table thead th:nth-child(2),
+.customers-table tbody td:nth-child(2) {
+	width: 10%;
+}
+
+.customers-table thead th:nth-child(3),
+.customers-table tbody td:nth-child(3) {
+	width: 20%;
+}
+
+.customers-table thead th:nth-child(4),
+.customers-table tbody td:nth-child(4) {
+	width: 10%;
+}
+
+.customers-table thead th:nth-child(5),
+.customers-table tbody td:nth-child(5) {
+	width: 10%;
+}
+
+.customers-table thead th:nth-child(6),
+.customers-table tbody td:nth-child(6) {
+	width: 10%;
+}
+
+.customers-table thead th:nth-child(7),
+.customers-table tbody td:nth-child(7) {
+	width: 20%;
 }
 
 /* Add Product Form */
@@ -353,11 +394,15 @@ SHOW AND HIDE PRODUCT FORM
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .image-column img {
 	width: 10rem;
 	height: 10rem;
+	top: 8%;
+	left: 5rem;
+	position: absolute;
 }
 .btn-action {
 	background: #4b5563;
