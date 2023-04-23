@@ -212,5 +212,6 @@ Popup Message
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(5px) brightness(92%);
 	z-index: 9998;
+	opacity: 1;
 	display: none;
 }
