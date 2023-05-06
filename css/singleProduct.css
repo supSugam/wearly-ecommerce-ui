@@ -208,3 +208,7 @@
 .side-icons i:hover {
 	transform: scale(1.2);
 }
+
+.product-content-half .stock-quantity {
+	font-size: 1.8rem;
+}
